@@ -1,0 +1,592 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		122C4F4130C41B98C9889367 /* Pods_TimeSheet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A03EC619401E7FA6BDF2FA6E /* Pods_TimeSheet.framework */; };
+		EF0AD135219C978100B85839 /* launchImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF0AD133219C978000B85839 /* launchImage@2x.png */; };
+		EF0AD136219C978100B85839 /* launchImage@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF0AD134219C978000B85839 /* launchImage@3x.png */; };
+		EF0AD138219C9B0900B85839 /* TS_LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0AD137219C9B0900B85839 /* TS_LandingViewController.swift */; };
+		EF20DF01219C0A02000FAD7E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF20DF00219C0A02000FAD7E /* AppDelegate.swift */; };
+		EF20DF03219C0A02000FAD7E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF20DF02219C0A02000FAD7E /* ViewController.swift */; };
+		EF20DF06219C0A02000FAD7E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF20DF04219C0A02000FAD7E /* Main.storyboard */; };
+		EF20DF09219C0A02000FAD7E /* TimeSheet.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EF20DF07219C0A02000FAD7E /* TimeSheet.xcdatamodeld */; };
+		EF20DF0B219C0A05000FAD7E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF20DF0A219C0A05000FAD7E /* Assets.xcassets */; };
+		EF20DF0E219C0A05000FAD7E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF20DF0C219C0A05000FAD7E /* LaunchScreen.storyboard */; };
+		EF20DF37219C0B80000FAD7E /* TS_MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF20DF36219C0B80000FAD7E /* TS_MapViewController.swift */; };
+		EF20DF39219C0D2A000FAD7E /* AnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF20DF38219C0D2A000FAD7E /* AnnotationView.swift */; };
+		EF20DF3B219C0D57000FAD7E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF20DF3A219C0D57000FAD7E /* Extensions.swift */; };
+		EF20DF52219C2EF4000FAD7E /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF20DF51219C2EF4000FAD7E /* Login.storyboard */; };
+		EF20DF5B219C3061000FAD7E /* Nunito-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF20DF54219C3061000FAD7E /* Nunito-Medium.ttf */; };
+		EF20DF5C219C3061000FAD7E /* Nunito-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF20DF55219C3061000FAD7E /* Nunito-ExtraBold.ttf */; };
+		EF20DF5D219C3061000FAD7E /* Nunito-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF20DF56219C3061000FAD7E /* Nunito-Light.ttf */; };
+		EF20DF5E219C3061000FAD7E /* Nunito-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF20DF57219C3061000FAD7E /* Nunito-Regular.ttf */; };
+		EF20DF5F219C3061000FAD7E /* Nunito-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF20DF58219C3061000FAD7E /* Nunito-SemiBold.ttf */; };
+		EF20DF60219C3061000FAD7E /* Nunito-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF20DF59219C3061000FAD7E /* Nunito-Bold.ttf */; };
+		EF20DF61219C3061000FAD7E /* Nunito-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF20DF5A219C3061000FAD7E /* Nunito-Black.ttf */; };
+		EF20DF64219C30B2000FAD7E /* TS_RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF20DF63219C30B2000FAD7E /* TS_RegistrationViewController.swift */; };
+		EF20DF6E219C30E6000FAD7E /* PRGVFInvalid@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF20DF66219C30E6000FAD7E /* PRGVFInvalid@3x.png */; };
+		EF20DF6F219C30E6000FAD7E /* PRGVFInvalid@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF20DF67219C30E6000FAD7E /* PRGVFInvalid@2x.png */; };
+		EF20DF70219C30E6000FAD7E /* PRGValidationField.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF20DF68219C30E6000FAD7E /* PRGValidationField.xib */; };
+		EF20DF71219C30E6000FAD7E /* PRGValidationField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF20DF69219C30E6000FAD7E /* PRGValidationField.swift */; };
+		EF20DF72219C30E6000FAD7E /* PRGVFValid@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF20DF6A219C30E6000FAD7E /* PRGVFValid@2x.png */; };
+		EF20DF73219C30E6000FAD7E /* PRGVFValid.png in Resources */ = {isa = PBXBuildFile; fileRef = EF20DF6B219C30E6000FAD7E /* PRGVFValid.png */; };
+		EF20DF74219C30E6000FAD7E /* PRGVFInvalid.png in Resources */ = {isa = PBXBuildFile; fileRef = EF20DF6C219C30E6000FAD7E /* PRGVFInvalid.png */; };
+		EF20DF75219C30E6000FAD7E /* PRGVFValid@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF20DF6D219C30E6000FAD7E /* PRGVFValid@3x.png */; };
+		EF2F2497219F3D5B001AE3FC /* TS_DashboardCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2F2496219F3D5B001AE3FC /* TS_DashboardCellCollectionViewCell.swift */; };
+		EF9DEA06219EC807000C25F7 /* TS_DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9DEA05219EC807000C25F7 /* TS_DashboardViewController.swift */; };
+		EF9DEA08219ECA58000C25F7 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9DEA07219ECA58000C25F7 /* Constant.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		06010F9BC68F47BEFDDF0EBE /* Pods-TimeSheet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeSheet.release.xcconfig"; path = "Target Support Files/Pods-TimeSheet/Pods-TimeSheet.release.xcconfig"; sourceTree = "<group>"; };
+		3869E15CEE37EF5488EF42A2 /* Pods-TimeSheet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeSheet.debug.xcconfig"; path = "Target Support Files/Pods-TimeSheet/Pods-TimeSheet.debug.xcconfig"; sourceTree = "<group>"; };
+		A03EC619401E7FA6BDF2FA6E /* Pods_TimeSheet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TimeSheet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF0AD133219C978000B85839 /* launchImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "launchImage@2x.png"; sourceTree = "<group>"; };
+		EF0AD134219C978000B85839 /* launchImage@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "launchImage@3x.png"; sourceTree = "<group>"; };
+		EF0AD137219C9B0900B85839 /* TS_LandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TS_LandingViewController.swift; sourceTree = "<group>"; };
+		EF20DEFD219C0A02000FAD7E /* TimeSheet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeSheet.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF20DF00219C0A02000FAD7E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EF20DF02219C0A02000FAD7E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EF20DF05219C0A02000FAD7E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EF20DF08219C0A02000FAD7E /* TimeSheet.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TimeSheet.xcdatamodel; sourceTree = "<group>"; };
+		EF20DF0A219C0A05000FAD7E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EF20DF0D219C0A05000FAD7E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EF20DF0F219C0A05000FAD7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF20DF36219C0B80000FAD7E /* TS_MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TS_MapViewController.swift; sourceTree = "<group>"; };
+		EF20DF38219C0D2A000FAD7E /* AnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnnotationView.swift; sourceTree = "<group>"; };
+		EF20DF3A219C0D57000FAD7E /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		EF20DF3E219C0F36000FAD7E /* Cluster.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Cluster.h; sourceTree = "<group>"; };
+		EF20DF51219C2EF4000FAD7E /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		EF20DF54219C3061000FAD7E /* Nunito-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Medium.ttf"; sourceTree = "<group>"; };
+		EF20DF55219C3061000FAD7E /* Nunito-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-ExtraBold.ttf"; sourceTree = "<group>"; };
+		EF20DF56219C3061000FAD7E /* Nunito-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Light.ttf"; sourceTree = "<group>"; };
+		EF20DF57219C3061000FAD7E /* Nunito-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Regular.ttf"; sourceTree = "<group>"; };
+		EF20DF58219C3061000FAD7E /* Nunito-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-SemiBold.ttf"; sourceTree = "<group>"; };
+		EF20DF59219C3061000FAD7E /* Nunito-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Bold.ttf"; sourceTree = "<group>"; };
+		EF20DF5A219C3061000FAD7E /* Nunito-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Black.ttf"; sourceTree = "<group>"; };
+		EF20DF63219C30B2000FAD7E /* TS_RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TS_RegistrationViewController.swift; sourceTree = "<group>"; };
+		EF20DF66219C30E6000FAD7E /* PRGVFInvalid@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PRGVFInvalid@3x.png"; sourceTree = "<group>"; };
+		EF20DF67219C30E6000FAD7E /* PRGVFInvalid@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PRGVFInvalid@2x.png"; sourceTree = "<group>"; };
+		EF20DF68219C30E6000FAD7E /* PRGValidationField.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PRGValidationField.xib; sourceTree = "<group>"; };
+		EF20DF69219C30E6000FAD7E /* PRGValidationField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PRGValidationField.swift; sourceTree = "<group>"; };
+		EF20DF6A219C30E6000FAD7E /* PRGVFValid@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PRGVFValid@2x.png"; sourceTree = "<group>"; };
+		EF20DF6B219C30E6000FAD7E /* PRGVFValid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PRGVFValid.png; sourceTree = "<group>"; };
+		EF20DF6C219C30E6000FAD7E /* PRGVFInvalid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PRGVFInvalid.png; sourceTree = "<group>"; };
+		EF20DF6D219C30E6000FAD7E /* PRGVFValid@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PRGVFValid@3x.png"; sourceTree = "<group>"; };
+		EF2F2496219F3D5B001AE3FC /* TS_DashboardCellCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TS_DashboardCellCollectionViewCell.swift; sourceTree = "<group>"; };
+		EF9DEA03219EB5A8000C25F7 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		EF9DEA05219EC807000C25F7 /* TS_DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TS_DashboardViewController.swift; sourceTree = "<group>"; };
+		EF9DEA07219ECA58000C25F7 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EF20DEFA219C0A02000FAD7E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				122C4F4130C41B98C9889367 /* Pods_TimeSheet.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1EC925CE26BCACE818CEA576 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A03EC619401E7FA6BDF2FA6E /* Pods_TimeSheet.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AB625A9E10F32EDD7AF9B307 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3869E15CEE37EF5488EF42A2 /* Pods-TimeSheet.debug.xcconfig */,
+				06010F9BC68F47BEFDDF0EBE /* Pods-TimeSheet.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		EF0AD130219C974200B85839 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EF0AD133219C978000B85839 /* launchImage@2x.png */,
+				EF0AD134219C978000B85839 /* launchImage@3x.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		EF20DEF4219C0A02000FAD7E = {
+			isa = PBXGroup;
+			children = (
+				EF20DEFF219C0A02000FAD7E /* TimeSheet */,
+				EF20DEFE219C0A02000FAD7E /* Products */,
+				AB625A9E10F32EDD7AF9B307 /* Pods */,
+				1EC925CE26BCACE818CEA576 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		EF20DEFE219C0A02000FAD7E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EF20DEFD219C0A02000FAD7E /* TimeSheet.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EF20DEFF219C0A02000FAD7E /* TimeSheet */ = {
+			isa = PBXGroup;
+			children = (
+				EF2F2495219F3C3C001AE3FC /* Cell */,
+				EF20DF62219C3098000FAD7E /* Login */,
+				EF20DF00219C0A02000FAD7E /* AppDelegate.swift */,
+				EF20DF02219C0A02000FAD7E /* ViewController.swift */,
+				EF20DF36219C0B80000FAD7E /* TS_MapViewController.swift */,
+				EF9DEA05219EC807000C25F7 /* TS_DashboardViewController.swift */,
+				EF9DEA04219EBDCB000C25F7 /* Storyboard */,
+				EF20DF38219C0D2A000FAD7E /* AnnotationView.swift */,
+				EF0AD137219C9B0900B85839 /* TS_LandingViewController.swift */,
+				EF20DF3A219C0D57000FAD7E /* Extensions.swift */,
+				EF20DF0A219C0A05000FAD7E /* Assets.xcassets */,
+				EF20DF0C219C0A05000FAD7E /* LaunchScreen.storyboard */,
+				EF20DF0F219C0A05000FAD7E /* Info.plist */,
+				EF20DF3E219C0F36000FAD7E /* Cluster.h */,
+				EF9DEA07219ECA58000C25F7 /* Constant.swift */,
+				EF0AD130219C974200B85839 /* Resources */,
+				EF20DF07219C0A02000FAD7E /* TimeSheet.xcdatamodeld */,
+				EF9DEA03219EB5A8000C25F7 /* MyPlayground.playground */,
+				EF20DF65219C30E6000FAD7E /* PRGValidationField */,
+				EF20DF53219C3061000FAD7E /* Fonts */,
+			);
+			path = TimeSheet;
+			sourceTree = "<group>";
+		};
+		EF20DF53219C3061000FAD7E /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				EF20DF54219C3061000FAD7E /* Nunito-Medium.ttf */,
+				EF20DF55219C3061000FAD7E /* Nunito-ExtraBold.ttf */,
+				EF20DF56219C3061000FAD7E /* Nunito-Light.ttf */,
+				EF20DF57219C3061000FAD7E /* Nunito-Regular.ttf */,
+				EF20DF58219C3061000FAD7E /* Nunito-SemiBold.ttf */,
+				EF20DF59219C3061000FAD7E /* Nunito-Bold.ttf */,
+				EF20DF5A219C3061000FAD7E /* Nunito-Black.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		EF20DF62219C3098000FAD7E /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				EF20DF63219C30B2000FAD7E /* TS_RegistrationViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		EF20DF65219C30E6000FAD7E /* PRGValidationField */ = {
+			isa = PBXGroup;
+			children = (
+				EF20DF66219C30E6000FAD7E /* PRGVFInvalid@3x.png */,
+				EF20DF67219C30E6000FAD7E /* PRGVFInvalid@2x.png */,
+				EF20DF68219C30E6000FAD7E /* PRGValidationField.xib */,
+				EF20DF69219C30E6000FAD7E /* PRGValidationField.swift */,
+				EF20DF6A219C30E6000FAD7E /* PRGVFValid@2x.png */,
+				EF20DF6B219C30E6000FAD7E /* PRGVFValid.png */,
+				EF20DF6C219C30E6000FAD7E /* PRGVFInvalid.png */,
+				EF20DF6D219C30E6000FAD7E /* PRGVFValid@3x.png */,
+			);
+			path = PRGValidationField;
+			sourceTree = "<group>";
+		};
+		EF2F2495219F3C3C001AE3FC /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				EF2F2496219F3D5B001AE3FC /* TS_DashboardCellCollectionViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		EF9DEA04219EBDCB000C25F7 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				EF20DF04219C0A02000FAD7E /* Main.storyboard */,
+				EF20DF51219C2EF4000FAD7E /* Login.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EF20DEFC219C0A02000FAD7E /* TimeSheet */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF20DF12219C0A05000FAD7E /* Build configuration list for PBXNativeTarget "TimeSheet" */;
+			buildPhases = (
+				A514DFBC1DB1EDF26F7E3C95 /* [CP] Check Pods Manifest.lock */,
+				EF20DEF9219C0A02000FAD7E /* Sources */,
+				EF20DEFA219C0A02000FAD7E /* Frameworks */,
+				EF20DEFB219C0A02000FAD7E /* Resources */,
+				4BC2C54C19B18DA418A4CE9C /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TimeSheet;
+			productName = TimeSheet;
+			productReference = EF20DEFD219C0A02000FAD7E /* TimeSheet.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EF20DEF5219C0A02000FAD7E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = TS_;
+				LastSwiftUpdateCheck = 1000;
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = Jeeva;
+				TargetAttributes = {
+					EF20DEFC219C0A02000FAD7E = {
+						CreatedOnToolsVersion = 10.0;
+					};
+				};
+			};
+			buildConfigurationList = EF20DEF8219C0A02000FAD7E /* Build configuration list for PBXProject "TimeSheet" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EF20DEF4219C0A02000FAD7E;
+			productRefGroup = EF20DEFE219C0A02000FAD7E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EF20DEFC219C0A02000FAD7E /* TimeSheet */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EF20DEFB219C0A02000FAD7E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF20DF52219C2EF4000FAD7E /* Login.storyboard in Resources */,
+				EF20DF6E219C30E6000FAD7E /* PRGVFInvalid@3x.png in Resources */,
+				EF20DF5D219C3061000FAD7E /* Nunito-Light.ttf in Resources */,
+				EF20DF5E219C3061000FAD7E /* Nunito-Regular.ttf in Resources */,
+				EF20DF5F219C3061000FAD7E /* Nunito-SemiBold.ttf in Resources */,
+				EF20DF70219C30E6000FAD7E /* PRGValidationField.xib in Resources */,
+				EF20DF73219C30E6000FAD7E /* PRGVFValid.png in Resources */,
+				EF20DF0E219C0A05000FAD7E /* LaunchScreen.storyboard in Resources */,
+				EF0AD136219C978100B85839 /* launchImage@3x.png in Resources */,
+				EF20DF0B219C0A05000FAD7E /* Assets.xcassets in Resources */,
+				EF0AD135219C978100B85839 /* launchImage@2x.png in Resources */,
+				EF20DF61219C3061000FAD7E /* Nunito-Black.ttf in Resources */,
+				EF20DF60219C3061000FAD7E /* Nunito-Bold.ttf in Resources */,
+				EF20DF5C219C3061000FAD7E /* Nunito-ExtraBold.ttf in Resources */,
+				EF20DF06219C0A02000FAD7E /* Main.storyboard in Resources */,
+				EF20DF6F219C30E6000FAD7E /* PRGVFInvalid@2x.png in Resources */,
+				EF20DF72219C30E6000FAD7E /* PRGVFValid@2x.png in Resources */,
+				EF20DF5B219C3061000FAD7E /* Nunito-Medium.ttf in Resources */,
+				EF20DF75219C30E6000FAD7E /* PRGVFValid@3x.png in Resources */,
+				EF20DF74219C30E6000FAD7E /* PRGVFInvalid.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4BC2C54C19B18DA418A4CE9C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TimeSheet/Pods-TimeSheet-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Cluster/Cluster.framework",
+				"${BUILT_PRODUCTS_DIR}/DropDown/DropDown.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cluster.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DropDown.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TimeSheet/Pods-TimeSheet-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A514DFBC1DB1EDF26F7E3C95 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TimeSheet-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EF20DEF9219C0A02000FAD7E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF9DEA06219EC807000C25F7 /* TS_DashboardViewController.swift in Sources */,
+				EF20DF37219C0B80000FAD7E /* TS_MapViewController.swift in Sources */,
+				EF0AD138219C9B0900B85839 /* TS_LandingViewController.swift in Sources */,
+				EF20DF3B219C0D57000FAD7E /* Extensions.swift in Sources */,
+				EF20DF03219C0A02000FAD7E /* ViewController.swift in Sources */,
+				EF20DF71219C30E6000FAD7E /* PRGValidationField.swift in Sources */,
+				EF20DF39219C0D2A000FAD7E /* AnnotationView.swift in Sources */,
+				EF20DF01219C0A02000FAD7E /* AppDelegate.swift in Sources */,
+				EF2F2497219F3D5B001AE3FC /* TS_DashboardCellCollectionViewCell.swift in Sources */,
+				EF9DEA08219ECA58000C25F7 /* Constant.swift in Sources */,
+				EF20DF64219C30B2000FAD7E /* TS_RegistrationViewController.swift in Sources */,
+				EF20DF09219C0A02000FAD7E /* TimeSheet.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		EF20DF04219C0A02000FAD7E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF20DF05219C0A02000FAD7E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EF20DF0C219C0A05000FAD7E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF20DF0D219C0A05000FAD7E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EF20DF10219C0A05000FAD7E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EF20DF11219C0A05000FAD7E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EF20DF13219C0A05000FAD7E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3869E15CEE37EF5488EF42A2 /* Pods-TimeSheet.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = EMA66R8VA4;
+				INFOPLIST_FILE = TimeSheet/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.cpd.TimeSheet;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EF20DF14219C0A05000FAD7E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 06010F9BC68F47BEFDDF0EBE /* Pods-TimeSheet.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = EMA66R8VA4;
+				INFOPLIST_FILE = TimeSheet/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.cpd.TimeSheet;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EF20DEF8219C0A02000FAD7E /* Build configuration list for PBXProject "TimeSheet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF20DF10219C0A05000FAD7E /* Debug */,
+				EF20DF11219C0A05000FAD7E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF20DF12219C0A05000FAD7E /* Build configuration list for PBXNativeTarget "TimeSheet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF20DF13219C0A05000FAD7E /* Debug */,
+				EF20DF14219C0A05000FAD7E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		EF20DF07219C0A02000FAD7E /* TimeSheet.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				EF20DF08219C0A02000FAD7E /* TimeSheet.xcdatamodel */,
+			);
+			currentVersion = EF20DF08219C0A02000FAD7E /* TimeSheet.xcdatamodel */;
+			path = TimeSheet.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = EF20DEF5219C0A02000FAD7E /* Project object */;
+}
