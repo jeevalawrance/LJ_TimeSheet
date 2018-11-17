@@ -10,7 +10,10 @@ import UIKit
 
 class TS_DashboardViewController: UIViewController {
     
-    var dashArray : NSMutableArray = []
+//    var dashArray : NSMutableArray = []
+    
+    var dashArray = [[String: String]]()
+
 
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -18,6 +21,13 @@ class TS_DashboardViewController: UIViewController {
         super.viewDidLoad()
         
         self.title = "Dashboard"
+        
+        self.dashArray = [["title": "Site-Wise", "subTitle": "List Report", "image" : "sitewise"],
+                          ["title": "Task-Wise", "subTitle": "List Report", "image" : "chart"],
+                          ["title": "Task Input", "subTitle": "Work Input", "image" : "task"],
+                          ["title": "Activity", "subTitle": "Workers activity", "image" : "Activity"]]
+
+        print("\(dashArray)")
         
 //        self.dashArray
 
@@ -53,12 +63,18 @@ extension TS_DashboardViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return self.dashArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "dashboard_cell_id", for: indexPath) as! TS_DashboardCellCollectionViewCell
-      //  cell.lblTitle.text = String(indexPath.row + 1)
+        let dict = self.dashArray[indexPath.row]
+        
+        cell.lblTitle.text = dict["title"]
+        cell.lblSubTitle.text = dict["subTitle"]
+
+        let image: UIImage = UIImage(named: dict["image"] ?? "chart")!
+        cell.image.image = image
         return cell
     }
 }
