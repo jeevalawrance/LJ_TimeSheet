@@ -56,6 +56,34 @@ class TS_CoredataModel: UIViewController {
         }
     }
 
+    
+    func retrieveParticularUser(email: String) -> Any {
+        
+        var userDetail : NSManagedObject!
+        
+        let context = appDelegate.persistentContainer.viewContext
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "User")
+        request.predicate = NSPredicate(format: "userEmail = %@", email)
+        request.returnsObjectsAsFaults = false
+        do {
+            let result = try context.fetch(request)
+          
+            for data in result as! [NSManagedObject] {
+                print(data.value(forKey: "userName") as! String)
+                
+                userDetail = data
+                
+                break
+            }
+            
+        } catch {
+            
+            print("Failed")
+        }
+        
+        return userDetail
+        
+    }
     /*
     // MARK: - Navigation
 

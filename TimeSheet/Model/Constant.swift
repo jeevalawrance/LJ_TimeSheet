@@ -40,10 +40,11 @@ class Constant: NSObject {
         // Response searchList
         
         static let kRegistered                     =    "Registered"
+        static let kLoggedIn                     =    "LoggedIn"
         static let kFirstName                     =    "FirstName"
         static let kLastName                      =    "LastName"
-        static let kOrganizationId                =    "OrganisationId"
-        static let kIndividualID                  =    "IndividualId"
+        static let kEmailId               =    "EmailId"
+        static let kUserType                  =    "UserType"
         static let kOrganizationName              =    "OrganisationName"
         static let kText                          =    "text"
         static let kID                            =    "Id"

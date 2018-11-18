@@ -17,8 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        
-        if  UserDefaults.standard.bool(forKey: Constant.GlobalConstants.kRegistered)
+//        UserDefaults.standard.set(false, forKey: Constant.GlobalConstants.kLoggedIn)
+        if  UserDefaults.standard.bool(forKey: Constant.GlobalConstants.kLoggedIn)
         {
             self.settingRootViewcontroller()
         }

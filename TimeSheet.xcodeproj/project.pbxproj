@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		122C4F4130C41B98C9889367 /* Pods_TimeSheet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A03EC619401E7FA6BDF2FA6E /* Pods_TimeSheet.framework */; };
 		EF073C1721A1B312009A0A27 /* TS_CoredataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF073C1621A1B312009A0A27 /* TS_CoredataModel.swift */; };
+		EF073C1921A1CE2B009A0A27 /* TS_LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF073C1821A1CE2B009A0A27 /* TS_LoginViewController.swift */; };
 		EF0AD135219C978100B85839 /* launchImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF0AD133219C978000B85839 /* launchImage@2x.png */; };
 		EF0AD136219C978100B85839 /* launchImage@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF0AD134219C978000B85839 /* launchImage@3x.png */; };
 		EF0AD138219C9B0900B85839 /* TS_LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0AD137219C9B0900B85839 /* TS_LandingViewController.swift */; };
@@ -52,6 +53,7 @@
 		3869E15CEE37EF5488EF42A2 /* Pods-TimeSheet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeSheet.debug.xcconfig"; path = "Target Support Files/Pods-TimeSheet/Pods-TimeSheet.debug.xcconfig"; sourceTree = "<group>"; };
 		A03EC619401E7FA6BDF2FA6E /* Pods_TimeSheet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TimeSheet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF073C1621A1B312009A0A27 /* TS_CoredataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TS_CoredataModel.swift; sourceTree = "<group>"; };
+		EF073C1821A1CE2B009A0A27 /* TS_LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TS_LoginViewController.swift; sourceTree = "<group>"; };
 		EF0AD133219C978000B85839 /* launchImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "launchImage@2x.png"; sourceTree = "<group>"; };
 		EF0AD134219C978000B85839 /* launchImage@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "launchImage@3x.png"; sourceTree = "<group>"; };
 		EF0AD137219C9B0900B85839 /* TS_LandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TS_LandingViewController.swift; sourceTree = "<group>"; };
@@ -196,6 +198,7 @@
 			isa = PBXGroup;
 			children = (
 				EF20DF63219C30B2000FAD7E /* TS_RegistrationViewController.swift */,
+				EF073C1821A1CE2B009A0A27 /* TS_LoginViewController.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -407,6 +410,7 @@
 				EF073C1721A1B312009A0A27 /* TS_CoredataModel.swift in Sources */,
 				EF2F2497219F3D5B001AE3FC /* TS_DashboardCellCollectionViewCell.swift in Sources */,
 				EF9DEA08219ECA58000C25F7 /* Constant.swift in Sources */,
+				EF073C1921A1CE2B009A0A27 /* TS_LoginViewController.swift in Sources */,
 				EF20DF64219C30B2000FAD7E /* TS_RegistrationViewController.swift in Sources */,
 				EF20DF09219C0A02000FAD7E /* TimeSheet.xcdatamodeld in Sources */,
 			);
