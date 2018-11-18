@@ -14,13 +14,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
+        
         if  UserDefaults.standard.bool(forKey: Constant.GlobalConstants.kRegistered)
         {
-            self.mainRootViewController()
+            self.settingRootViewcontroller()
         }
         else{
             
@@ -50,6 +50,43 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        [[UINavigationBar appearance] setTranslucent:NO];
 //        [UINavigationBar appearance].tintColor = [UIColor whiteColor];
     }
+    
+    func settingRootViewcontroller()  {
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let rootView : UINavigationController = storyboard.instantiateViewController(withIdentifier: "mainRootNav") as! UINavigationController
+
+        UIView.transition(with: self.window!, duration: 0.3, options: .transitionCrossDissolve, animations: {
+            self.window!.rootViewController = rootView
+        }, completion: { completed in
+            // maybe do something here
+        })
+
+//        let storyboard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+//        let rootView : UINavigationController = storyboard.instantiateViewController(withIdentifier: "mainRootNav") as! UINavigationController
+//
+//        let snapShot = self.window!.snapshotView(afterScreenUpdates: true)
+//
+//        rootView.view.addSubview(snapShot!)
+//
+//
+//
+//        AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+//
+//        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
+//        UINavigationController *rootView=[storyboard instantiateViewControllerWithIdentifier:@"homeRoot"];
+//
+//
+//
+//        UIView *snapShot = [appDelegate.window snapshotViewAfterScreenUpdates:YES];
+//        [rootView.view addSubview:snapShot];
+//        [UIView animateWithDuration:0.5 animations:^{
+//            snapShot.layer.transform = CATransform3DMakeTranslation(0,-[UIScreen mainScreen].bounds.size.height,0);
+//            appDelegate.window.rootViewController = rootView;
+//            } completion:^(BOOL finished) {
+//            [snapShot removeFromSuperview];
+//            }];
+    }
 
     func mainRootViewController() {
         
@@ -57,6 +94,39 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let navigationController : UINavigationController = storyboard.instantiateViewController(withIdentifier: "mainRootNav") as! UINavigationController
         
         self.window?.rootViewController = navigationController
+    }
+    
+    func createUser(name : String, surName:String, mailId : String, userType : Int) {
+        
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        let entity = NSEntityDescription.entity(forEntityName: "User", in: context)
+        let newUser = NSManagedObject(entity: entity!, insertInto: context)
+        newUser.setValue(mailId, forKey: "userEmail")
+        newUser.setValue(name, forKey: "userName")
+        newUser.setValue(surName, forKey: "userSurname")
+        newUser.setValue(userType, forKey: "userType")
+//        newUser.setValue("1", forKey: "userType")
+        do {
+            try context.save()
+        } catch {
+            print("Failed saving")
+        }
+        
+    }
+    
+    func createUser() {
+        
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        let entity = NSEntityDescription.entity(forEntityName: "User", in: context)
+        let newUser = NSManagedObject(entity: entity!, insertInto: context)
+        newUser.setValue("Shashikant", forKey: "username")
+        newUser.setValue("1234", forKey: "password")
+        newUser.setValue("1", forKey: "age")
+        
+        
+
     }
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

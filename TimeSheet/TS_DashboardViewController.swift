@@ -27,10 +27,8 @@ class TS_DashboardViewController: UIViewController {
                           ["title": "Task Input", "subTitle": "Work Input", "image" : "task"],
                           ["title": "Activity", "subTitle": "Workers activity", "image" : "Activity"]]
 
-        print("\(dashArray)")
+//        print("\(dashArray)")
         
-//        self.dashArray
-
         // Do any additional setup after loading the view.
     }
 
@@ -83,5 +81,13 @@ extension TS_DashboardViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print(indexPath.item + 1)
+        
+        let storyboard:UIStoryboard = UIStoryboard(name: "TaskInput", bundle: nil)
+//        let navigationController : UINavigationController = storyboard.instantiateViewController(withIdentifier: "mainRootNav") as! UINavigationController
+
+        let taskVC = storyboard.instantiateViewController(withIdentifier: "taskInputVC") as! TS_TaskViewController
+
+        self.navigationController?.pushViewController(taskVC, animated: true)
+        
     }
 }

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		122C4F4130C41B98C9889367 /* Pods_TimeSheet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A03EC619401E7FA6BDF2FA6E /* Pods_TimeSheet.framework */; };
+		EF073C1721A1B312009A0A27 /* TS_CoredataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF073C1621A1B312009A0A27 /* TS_CoredataModel.swift */; };
 		EF0AD135219C978100B85839 /* launchImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF0AD133219C978000B85839 /* launchImage@2x.png */; };
 		EF0AD136219C978100B85839 /* launchImage@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF0AD134219C978000B85839 /* launchImage@3x.png */; };
 		EF0AD138219C9B0900B85839 /* TS_LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0AD137219C9B0900B85839 /* TS_LandingViewController.swift */; };
@@ -38,6 +39,9 @@
 		EF20DF74219C30E6000FAD7E /* PRGVFInvalid.png in Resources */ = {isa = PBXBuildFile; fileRef = EF20DF6C219C30E6000FAD7E /* PRGVFInvalid.png */; };
 		EF20DF75219C30E6000FAD7E /* PRGVFValid@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF20DF6D219C30E6000FAD7E /* PRGVFValid@3x.png */; };
 		EF2F2497219F3D5B001AE3FC /* TS_DashboardCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2F2496219F3D5B001AE3FC /* TS_DashboardCellCollectionViewCell.swift */; };
+		EF807CAE21A174EF009A7C7B /* TS_ProjectListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF807CAD21A174EF009A7C7B /* TS_ProjectListViewController.swift */; };
+		EF895BC221A0076700EDA0CA /* TaskInput.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF895BC121A0076700EDA0CA /* TaskInput.storyboard */; };
+		EF895BC521A0093C00EDA0CA /* TS_TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF895BC421A0093C00EDA0CA /* TS_TaskViewController.swift */; };
 		EF9DEA06219EC807000C25F7 /* TS_DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9DEA05219EC807000C25F7 /* TS_DashboardViewController.swift */; };
 		EF9DEA08219ECA58000C25F7 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9DEA07219ECA58000C25F7 /* Constant.swift */; };
 		EFB6FEB7219FED3C00C58932 /* TS_DashboardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB6FEB6219FED3C00C58932 /* TS_DashboardModel.swift */; };
@@ -47,6 +51,7 @@
 		06010F9BC68F47BEFDDF0EBE /* Pods-TimeSheet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeSheet.release.xcconfig"; path = "Target Support Files/Pods-TimeSheet/Pods-TimeSheet.release.xcconfig"; sourceTree = "<group>"; };
 		3869E15CEE37EF5488EF42A2 /* Pods-TimeSheet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeSheet.debug.xcconfig"; path = "Target Support Files/Pods-TimeSheet/Pods-TimeSheet.debug.xcconfig"; sourceTree = "<group>"; };
 		A03EC619401E7FA6BDF2FA6E /* Pods_TimeSheet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TimeSheet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF073C1621A1B312009A0A27 /* TS_CoredataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TS_CoredataModel.swift; sourceTree = "<group>"; };
 		EF0AD133219C978000B85839 /* launchImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "launchImage@2x.png"; sourceTree = "<group>"; };
 		EF0AD134219C978000B85839 /* launchImage@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "launchImage@3x.png"; sourceTree = "<group>"; };
 		EF0AD137219C9B0900B85839 /* TS_LandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TS_LandingViewController.swift; sourceTree = "<group>"; };
@@ -80,6 +85,9 @@
 		EF20DF6C219C30E6000FAD7E /* PRGVFInvalid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PRGVFInvalid.png; sourceTree = "<group>"; };
 		EF20DF6D219C30E6000FAD7E /* PRGVFValid@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PRGVFValid@3x.png"; sourceTree = "<group>"; };
 		EF2F2496219F3D5B001AE3FC /* TS_DashboardCellCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TS_DashboardCellCollectionViewCell.swift; sourceTree = "<group>"; };
+		EF807CAD21A174EF009A7C7B /* TS_ProjectListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TS_ProjectListViewController.swift; sourceTree = "<group>"; };
+		EF895BC121A0076700EDA0CA /* TaskInput.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TaskInput.storyboard; sourceTree = "<group>"; };
+		EF895BC421A0093C00EDA0CA /* TS_TaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TS_TaskViewController.swift; sourceTree = "<group>"; };
 		EF9DEA03219EB5A8000C25F7 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		EF9DEA05219EC807000C25F7 /* TS_DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TS_DashboardViewController.swift; sourceTree = "<group>"; };
 		EF9DEA07219ECA58000C25F7 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
@@ -145,6 +153,7 @@
 		EF20DEFF219C0A02000FAD7E /* TimeSheet */ = {
 			isa = PBXGroup;
 			children = (
+				EF895BC321A0091B00EDA0CA /* TaskInput */,
 				EFB6FEB5219FE88A00C58932 /* Model */,
 				EF2F2495219F3C3C001AE3FC /* Cell */,
 				EF20DF62219C3098000FAD7E /* Login */,
@@ -160,7 +169,6 @@
 				EF20DF0C219C0A05000FAD7E /* LaunchScreen.storyboard */,
 				EF20DF0F219C0A05000FAD7E /* Info.plist */,
 				EF20DF3E219C0F36000FAD7E /* Cluster.h */,
-				EF9DEA07219ECA58000C25F7 /* Constant.swift */,
 				EF0AD130219C974200B85839 /* Resources */,
 				EF20DF07219C0A02000FAD7E /* TimeSheet.xcdatamodeld */,
 				EF9DEA03219EB5A8000C25F7 /* MyPlayground.playground */,
@@ -215,11 +223,21 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		EF895BC321A0091B00EDA0CA /* TaskInput */ = {
+			isa = PBXGroup;
+			children = (
+				EF895BC421A0093C00EDA0CA /* TS_TaskViewController.swift */,
+				EF807CAD21A174EF009A7C7B /* TS_ProjectListViewController.swift */,
+			);
+			path = TaskInput;
+			sourceTree = "<group>";
+		};
 		EF9DEA04219EBDCB000C25F7 /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
 				EF20DF04219C0A02000FAD7E /* Main.storyboard */,
 				EF20DF51219C2EF4000FAD7E /* Login.storyboard */,
+				EF895BC121A0076700EDA0CA /* TaskInput.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -228,6 +246,8 @@
 			isa = PBXGroup;
 			children = (
 				EFB6FEB6219FED3C00C58932 /* TS_DashboardModel.swift */,
+				EF073C1621A1B312009A0A27 /* TS_CoredataModel.swift */,
+				EF9DEA07219ECA58000C25F7 /* Constant.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -294,6 +314,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF20DF52219C2EF4000FAD7E /* Login.storyboard in Resources */,
+				EF895BC221A0076700EDA0CA /* TaskInput.storyboard in Resources */,
 				EF20DF6E219C30E6000FAD7E /* PRGVFInvalid@3x.png in Resources */,
 				EF20DF5D219C3061000FAD7E /* Nunito-Light.ttf in Resources */,
 				EF20DF5E219C3061000FAD7E /* Nunito-Regular.ttf in Resources */,
@@ -378,9 +399,12 @@
 				EF20DF3B219C0D57000FAD7E /* Extensions.swift in Sources */,
 				EF20DF03219C0A02000FAD7E /* ViewController.swift in Sources */,
 				EF20DF71219C30E6000FAD7E /* PRGValidationField.swift in Sources */,
+				EF895BC521A0093C00EDA0CA /* TS_TaskViewController.swift in Sources */,
 				EF20DF39219C0D2A000FAD7E /* AnnotationView.swift in Sources */,
 				EFB6FEB7219FED3C00C58932 /* TS_DashboardModel.swift in Sources */,
 				EF20DF01219C0A02000FAD7E /* AppDelegate.swift in Sources */,
+				EF807CAE21A174EF009A7C7B /* TS_ProjectListViewController.swift in Sources */,
+				EF073C1721A1B312009A0A27 /* TS_CoredataModel.swift in Sources */,
 				EF2F2497219F3D5B001AE3FC /* TS_DashboardCellCollectionViewCell.swift in Sources */,
 				EF9DEA08219ECA58000C25F7 /* Constant.swift in Sources */,
 				EF20DF64219C30B2000FAD7E /* TS_RegistrationViewController.swift in Sources */,

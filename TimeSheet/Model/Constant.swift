@@ -1,6 +1,12 @@
 
 import UIKit
 
+enum UserType : Int {
+    case Contractor
+    case SubContractor
+    case Executive
+    case Supervisor
+}
 
 class Constant: NSObject {
     

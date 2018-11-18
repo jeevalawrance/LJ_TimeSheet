@@ -29,6 +29,9 @@ class TS_RegistrationViewController: UIViewController , PRGValidationFieldDelega
     let dropDown = DropDown()
     
     var categoryType : NSString!
+    
+    var userType : Int = 0
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,6 +66,8 @@ class TS_RegistrationViewController: UIViewController , PRGValidationFieldDelega
             print("Selected item: \(item) at index: \(index)")
             self.categoryType = item as NSString
             self.lblUserType.text = "  \(item)"
+            
+            self.userType =  index
         }
         
         // Will set a custom width instead of the anchor view width
@@ -88,10 +93,15 @@ class TS_RegistrationViewController: UIViewController , PRGValidationFieldDelega
     
     @IBAction func registerButtonTapped(_ sender: UIButton) {
         
+        let objCoredata = TS_CoredataModel()
+        
+        objCoredata.createUser(name: self.nameField.text ?? "", surName: self.surnameField.text ?? "", mailId: self.emailField.text ?? "", userType: self.userType)
+        
         UserDefaults.standard.set(true, forKey: Constant.GlobalConstants.kRegistered)
         
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        appDelegate.mainRootViewController()
+//        appDelegate.mainRootViewController()
+        appDelegate.settingRootViewcontroller()
         
     }
     
