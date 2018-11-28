@@ -8,6 +8,7 @@
 
 import UIKit
 import DropDown
+import CoreData
 
 class TS_RegistrationViewController: UIViewController , PRGValidationFieldDelegate {
     
@@ -93,16 +94,64 @@ class TS_RegistrationViewController: UIViewController , PRGValidationFieldDelega
     
     @IBAction func registerButtonTapped(_ sender: UIButton) {
         
-        let objCoredata = TS_CoredataModel()
-        
-        objCoredata.createUser(name: self.nameField.text ?? "", surName: self.surnameField.text ?? "", mailId: self.emailField.text ?? "", userType: self.userType)
-        
-        UserDefaults.standard.set(true, forKey: Constant.GlobalConstants.kRegistered)
-        
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-//        appDelegate.mainRootViewController()
-        appDelegate.settingRootViewcontroller()
+        if(self.isValidEmail(email: self.emailField!.text)){
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            let context = appDelegate.persistentContainer.viewContext
+            let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "User")
+            fetchRequest.predicate = NSPredicate(format: "userEmail = %@", self.emailField.text!)
+            
+            do {
+                let profiles = try context.fetch(fetchRequest)
+                
+                if profiles.count > 0
+                {
+                    let alertController = UIAlertController(title: "Error", message: "Email already used", preferredStyle: .alert)
+                    
+                    
+                    let action3 = UIAlertAction(title: "OK", style: .destructive) { (action:UIAlertAction) in
+                        print("You've pressed the destructive");
+                    }
+                    alertController.addAction(action3)
+                    self.present(alertController, animated: true, completion: nil)
+                }
+                else
+                {
+                    let objCoredata = TS_CoredataModel()
+                    
+                    let type = self.userType + 1
+                    
+                    objCoredata.createUser(name: self.nameField.text ?? "", surName: self.surnameField.text ?? "", mailId: self.emailField.text ?? "", userType: type)
+                    
+                    UserDefaults.standard.set(true, forKey: Constant.GlobalConstants.kRegistered)
+                    
+                    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+
+                    appDelegate.settingRootViewcontroller()
+                }
+               
+            } catch {
+                // handle error
+            }
+        }
+        else{
+            let alertController = UIAlertController(title: "Error", message: "Please enter all valid fields", preferredStyle: .alert)
+            
+            
+            let action3 = UIAlertAction(title: "OK", style: .destructive) { (action:UIAlertAction) in
+                print("You've pressed the destructive");
+            }
+            alertController.addAction(action3)
+            self.present(alertController, animated: true, completion: nil)
+        }
         
     }
-    
+    func isValidEmail(email:String?) -> Bool {
+        
+        guard email != nil else { return false }
+        
+        let regEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
+        
+        let pred = NSPredicate(format:"SELF MATCHES %@", regEx)
+        return pred.evaluate(with: email)
+    }
 }

@@ -46,12 +46,14 @@
 		EF9DEA06219EC807000C25F7 /* TS_DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9DEA05219EC807000C25F7 /* TS_DashboardViewController.swift */; };
 		EF9DEA08219ECA58000C25F7 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9DEA07219ECA58000C25F7 /* Constant.swift */; };
 		EFB6FEB7219FED3C00C58932 /* TS_DashboardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB6FEB6219FED3C00C58932 /* TS_DashboardModel.swift */; };
+		EFBFE07E21A2D96600B84137 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EFBFE07D21A2D96600B84137 /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		06010F9BC68F47BEFDDF0EBE /* Pods-TimeSheet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeSheet.release.xcconfig"; path = "Target Support Files/Pods-TimeSheet/Pods-TimeSheet.release.xcconfig"; sourceTree = "<group>"; };
 		3869E15CEE37EF5488EF42A2 /* Pods-TimeSheet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeSheet.debug.xcconfig"; path = "Target Support Files/Pods-TimeSheet/Pods-TimeSheet.debug.xcconfig"; sourceTree = "<group>"; };
 		A03EC619401E7FA6BDF2FA6E /* Pods_TimeSheet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TimeSheet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF05BD7721AEA2AF0047E823 /* TimeSheet.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TimeSheet.entitlements; sourceTree = "<group>"; };
 		EF073C1621A1B312009A0A27 /* TS_CoredataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TS_CoredataModel.swift; sourceTree = "<group>"; };
 		EF073C1821A1CE2B009A0A27 /* TS_LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TS_LoginViewController.swift; sourceTree = "<group>"; };
 		EF0AD133219C978000B85839 /* launchImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "launchImage@2x.png"; sourceTree = "<group>"; };
@@ -64,7 +66,6 @@
 		EF20DF08219C0A02000FAD7E /* TimeSheet.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TimeSheet.xcdatamodel; sourceTree = "<group>"; };
 		EF20DF0A219C0A05000FAD7E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EF20DF0D219C0A05000FAD7E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		EF20DF0F219C0A05000FAD7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF20DF36219C0B80000FAD7E /* TS_MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TS_MapViewController.swift; sourceTree = "<group>"; };
 		EF20DF38219C0D2A000FAD7E /* AnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnnotationView.swift; sourceTree = "<group>"; };
 		EF20DF3A219C0D57000FAD7E /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -94,6 +95,7 @@
 		EF9DEA05219EC807000C25F7 /* TS_DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TS_DashboardViewController.swift; sourceTree = "<group>"; };
 		EF9DEA07219ECA58000C25F7 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		EFB6FEB6219FED3C00C58932 /* TS_DashboardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TS_DashboardModel.swift; sourceTree = "<group>"; };
+		EFBFE07D21A2D96600B84137 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +157,7 @@
 		EF20DEFF219C0A02000FAD7E /* TimeSheet */ = {
 			isa = PBXGroup;
 			children = (
+				EF05BD7721AEA2AF0047E823 /* TimeSheet.entitlements */,
 				EF895BC321A0091B00EDA0CA /* TaskInput */,
 				EFB6FEB5219FE88A00C58932 /* Model */,
 				EF2F2495219F3C3C001AE3FC /* Cell */,
@@ -169,7 +172,7 @@
 				EF20DF3A219C0D57000FAD7E /* Extensions.swift */,
 				EF20DF0A219C0A05000FAD7E /* Assets.xcassets */,
 				EF20DF0C219C0A05000FAD7E /* LaunchScreen.storyboard */,
-				EF20DF0F219C0A05000FAD7E /* Info.plist */,
+				EFBFE07D21A2D96600B84137 /* Info.plist */,
 				EF20DF3E219C0F36000FAD7E /* Cluster.h */,
 				EF0AD130219C974200B85839 /* Resources */,
 				EF20DF07219C0A02000FAD7E /* TimeSheet.xcdatamodeld */,
@@ -290,6 +293,11 @@
 				TargetAttributes = {
 					EF20DEFC219C0A02000FAD7E = {
 						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.AutoFillCredentialProvider = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -324,6 +332,7 @@
 				EF20DF5F219C3061000FAD7E /* Nunito-SemiBold.ttf in Resources */,
 				EF20DF70219C30E6000FAD7E /* PRGValidationField.xib in Resources */,
 				EF20DF73219C30E6000FAD7E /* PRGVFValid.png in Resources */,
+				EFBFE07E21A2D96600B84137 /* Info.plist in Resources */,
 				EF20DF0E219C0A05000FAD7E /* LaunchScreen.storyboard in Resources */,
 				EF0AD136219C978100B85839 /* launchImage@3x.png in Resources */,
 				EF20DF0B219C0A05000FAD7E /* Assets.xcassets in Resources */,
@@ -489,7 +498,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -544,7 +553,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -562,6 +571,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EMA66R8VA4;
 				INFOPLIST_FILE = TimeSheet/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -581,6 +591,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EMA66R8VA4;
 				INFOPLIST_FILE = TimeSheet/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

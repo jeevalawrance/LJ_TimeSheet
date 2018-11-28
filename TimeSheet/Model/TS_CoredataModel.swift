@@ -32,6 +32,9 @@ class TS_CoredataModel: UIViewController {
         //        newUser.setValue("1", forKey: "userType")
         do {
             try context.save()
+            
+            print("Success saving")
+
         } catch {
             print("Failed saving")
         }
@@ -48,6 +51,14 @@ class TS_CoredataModel: UIViewController {
             let result = try context.fetch(request)
             for data in result as! [NSManagedObject] {
                 print(data.value(forKey: "userName") as! String)
+                
+                let objUrl : URL = data.objectID.uriRepresentation()
+                
+                let objectId = objUrl.absoluteString
+                
+//                let objectId = appDelegate.persistentContainer.persistentStoreCoordinator.managedObjectID(forURIRepresentation:objUrl.uriRepresentation())
+                
+                print("object Id = \(objectId)")
             }
             
         } catch {
@@ -55,9 +66,8 @@ class TS_CoredataModel: UIViewController {
             print("Failed")
         }
     }
-
     
-    func retrieveParticularUser(email: String) -> Any {
+    func retrieveParticularUser(email: String) -> NSManagedObject {
         
         var userDetail : NSManagedObject!
         
@@ -73,6 +83,10 @@ class TS_CoredataModel: UIViewController {
                 
                 userDetail = data
                 
+//                let objUrl : URL = data.objectID.uriRepresentation()
+//
+//                let objectId = objUrl.absoluteString
+                
                 break
             }
             
@@ -82,6 +96,38 @@ class TS_CoredataModel: UIViewController {
         }
         
         return userDetail
+        
+    }
+    
+    func createNewProject(name : String) {
+        
+        let data = self.retrieveParticularUser(email: Constant.GlobalConstants.kEmailId)
+        
+        if ((data as? NSNull) == nil)  {
+            
+        }
+        else
+        {
+            let objUrl : URL = data.objectID.uriRepresentation()
+            
+            let objectId = objUrl.absoluteString
+            
+            let userType = data.value(forKey: "userType")
+
+            let context = appDelegate.persistentContainer.viewContext
+            let entity = NSEntityDescription.entity(forEntityName: "ProjectList", in: context)
+            let newUser = NSManagedObject(entity: entity!, insertInto: context)
+            newUser.setValue(name, forKey: "projectName")
+            newUser.setValue(objectId, forKey: "userID")
+            newUser.setValue(userType, forKey: "userType")
+            //        newUser.setValue("1", forKey: "userType")
+            do {
+                try context.save()
+                
+            } catch {
+                print("Failed saving")
+            }
+        }
         
     }
     /*
