@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		122C4F4130C41B98C9889367 /* Pods_TimeSheet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A03EC619401E7FA6BDF2FA6E /* Pods_TimeSheet.framework */; };
+		EF05BD7B21AFCCB00047E823 /* TS_VerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF05BD7A21AFCCB00047E823 /* TS_VerificationViewController.swift */; };
 		EF073C1721A1B312009A0A27 /* TS_CoredataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF073C1621A1B312009A0A27 /* TS_CoredataModel.swift */; };
 		EF073C1921A1CE2B009A0A27 /* TS_LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF073C1821A1CE2B009A0A27 /* TS_LoginViewController.swift */; };
 		EF0AD135219C978100B85839 /* launchImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF0AD133219C978000B85839 /* launchImage@2x.png */; };
@@ -54,6 +55,7 @@
 		3869E15CEE37EF5488EF42A2 /* Pods-TimeSheet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeSheet.debug.xcconfig"; path = "Target Support Files/Pods-TimeSheet/Pods-TimeSheet.debug.xcconfig"; sourceTree = "<group>"; };
 		A03EC619401E7FA6BDF2FA6E /* Pods_TimeSheet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TimeSheet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF05BD7721AEA2AF0047E823 /* TimeSheet.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TimeSheet.entitlements; sourceTree = "<group>"; };
+		EF05BD7A21AFCCB00047E823 /* TS_VerificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TS_VerificationViewController.swift; sourceTree = "<group>"; };
 		EF073C1621A1B312009A0A27 /* TS_CoredataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TS_CoredataModel.swift; sourceTree = "<group>"; };
 		EF073C1821A1CE2B009A0A27 /* TS_LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TS_LoginViewController.swift; sourceTree = "<group>"; };
 		EF0AD133219C978000B85839 /* launchImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "launchImage@2x.png"; sourceTree = "<group>"; };
@@ -202,6 +204,7 @@
 			children = (
 				EF20DF63219C30B2000FAD7E /* TS_RegistrationViewController.swift */,
 				EF073C1821A1CE2B009A0A27 /* TS_LoginViewController.swift */,
+				EF05BD7A21AFCCB00047E823 /* TS_VerificationViewController.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -413,6 +416,7 @@
 				EF20DF71219C30E6000FAD7E /* PRGValidationField.swift in Sources */,
 				EF895BC521A0093C00EDA0CA /* TS_TaskViewController.swift in Sources */,
 				EF20DF39219C0D2A000FAD7E /* AnnotationView.swift in Sources */,
+				EF05BD7B21AFCCB00047E823 /* TS_VerificationViewController.swift in Sources */,
 				EFB6FEB7219FED3C00C58932 /* TS_DashboardModel.swift in Sources */,
 				EF20DF01219C0A02000FAD7E /* AppDelegate.swift in Sources */,
 				EF807CAE21A174EF009A7C7B /* TS_ProjectListViewController.swift in Sources */,

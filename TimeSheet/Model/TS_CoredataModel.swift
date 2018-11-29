@@ -19,24 +19,63 @@ class TS_CoredataModel: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    func createUser(name : String, surName:String, mailId : String, userType : Int) {
+    func createUser(name : String, surName:String, mailId : String, userType : Int, isNewUser : Bool) {
         
-        
-        let context = appDelegate.persistentContainer.viewContext
-        let entity = NSEntityDescription.entity(forEntityName: "User", in: context)
-        let newUser = NSManagedObject(entity: entity!, insertInto: context)
-        newUser.setValue(mailId, forKey: "userEmail")
-        newUser.setValue(name, forKey: "userName")
-        newUser.setValue(surName, forKey: "userSurname")
-        newUser.setValue(userType, forKey: "userType")
-        //        newUser.setValue("1", forKey: "userType")
-        do {
-            try context.save()
+        if isNewUser{
+            let context = appDelegate.persistentContainer.viewContext
+            let entity = NSEntityDescription.entity(forEntityName: "User", in: context)
+            let newUser = NSManagedObject(entity: entity!, insertInto: context)
+            newUser.setValue(mailId, forKey: "userEmail")
+            newUser.setValue(name, forKey: "userName")
+            newUser.setValue(surName, forKey: "userSurname")
+            newUser.setValue(userType, forKey: "userType")
+            newUser.setValue(false, forKey: "userIsVerified")
+            //        newUser.setValue("1", forKey: "userType")
+            do {
+                try context.save()
+                
+                print("Success saving")
+                
+            } catch {
+                print("Failed saving")
+            }
+        }
+        else{
             
-            print("Success saving")
-
-        } catch {
-            print("Failed saving")
+            var userDetail : NSManagedObject!
+            
+            let context = appDelegate.persistentContainer.viewContext
+            let request = NSFetchRequest<NSFetchRequestResult>(entityName: "User")
+            request.predicate = NSPredicate(format: "userEmail = %@", mailId)
+            request.returnsObjectsAsFaults = false
+            do {
+                let result = try context.fetch(request)
+                
+                for data in result as! [NSManagedObject] {
+                    print(data.value(forKey: "userName") as! String)
+                    
+                    userDetail = data
+                   
+                    break
+                }
+                
+            } catch {
+                
+                print("Failed")
+            }
+            if (userDetail != nil)
+            {
+                userDetail.setValue(true, forKey: "userIsVerified")
+                
+                do {
+                    try context.save()
+                    
+                    print("Success saving")
+                    
+                } catch {
+                    print("Failed saving")
+                }
+            }
         }
         
     }

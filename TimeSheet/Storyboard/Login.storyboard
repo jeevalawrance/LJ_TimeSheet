@@ -101,7 +101,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hTK-o8-jpU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-359.19999999999999" y="56.221889055472268"/>
+            <point key="canvasLocation" x="-809" y="55"/>
         </scene>
         <!--Registration View Controller-->
         <scene sceneID="jai-Ci-El5">
@@ -371,6 +371,67 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3UF-v8-OQr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1279" y="56"/>
+        </scene>
+        <!--Verification View Controller-->
+        <scene sceneID="giH-zD-zBH">
+            <objects>
+                <viewController storyboardIdentifier="verifyVC" id="13O-iE-st9" customClass="TS_VerificationViewController" customModule="TimeSheet" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2TN-Un-F6C">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter verification code" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6kl-P9-LEh">
+                                <rect key="frame" x="20" y="214" width="335" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <connections>
+                                    <action selector="doneEditing:" destination="13O-iE-st9" eventType="editingDidEnd" id="OT9-8U-m1z"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter verification code which is send in your registered email" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ef2-Jp-JM4">
+                                <rect key="frame" x="20" y="94" width="335" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="B2w-A1-cfo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gNq-VM-SoK">
+                                <rect key="frame" x="147.5" y="264" width="80" height="30"/>
+                                <color key="backgroundColor" red="0.051930276352714223" green="0.062046032748182448" blue="0.081079987046632107" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="4NW-7W-en5"/>
+                                    <constraint firstAttribute="height" constant="30" id="h3A-hK-KuR"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Resend">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="gNq-VM-SoK" firstAttribute="centerX" secondItem="2TN-Un-F6C" secondAttribute="centerX" id="2uJ-B6-fBO"/>
+                            <constraint firstItem="5HO-EP-V4T" firstAttribute="trailing" secondItem="6kl-P9-LEh" secondAttribute="trailing" constant="20" id="65h-KW-VCK"/>
+                            <constraint firstItem="6kl-P9-LEh" firstAttribute="top" secondItem="ef2-Jp-JM4" secondAttribute="bottom" constant="20" id="LpA-gL-MQz"/>
+                            <constraint firstItem="5HO-EP-V4T" firstAttribute="trailing" secondItem="ef2-Jp-JM4" secondAttribute="trailing" constant="20" id="gvI-Uu-lal"/>
+                            <constraint firstItem="ef2-Jp-JM4" firstAttribute="top" secondItem="5HO-EP-V4T" secondAttribute="top" constant="30" id="obY-X7-Hmb"/>
+                            <constraint firstItem="6kl-P9-LEh" firstAttribute="leading" secondItem="5HO-EP-V4T" secondAttribute="leading" constant="20" id="qzB-Vn-hHX"/>
+                            <constraint firstItem="ef2-Jp-JM4" firstAttribute="leading" secondItem="5HO-EP-V4T" secondAttribute="leading" constant="20" id="sSv-Zr-Nxo"/>
+                            <constraint firstItem="gNq-VM-SoK" firstAttribute="top" secondItem="6kl-P9-LEh" secondAttribute="bottom" constant="20" id="tqf-aq-kHt"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="5HO-EP-V4T"/>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="txtOtp" destination="6kl-P9-LEh" id="sis-Ir-ZIB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DNB-8Q-hPf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2101.5999999999999" y="39.130434782608695"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="dT8-6k-JGs">

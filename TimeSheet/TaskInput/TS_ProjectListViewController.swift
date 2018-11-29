@@ -53,7 +53,31 @@ class TS_ProjectListViewController: UIViewController {
         }
         let saveAction = UIAlertAction(title: "Save", style: UIAlertAction.Style.default, handler: { alert -> Void in
             let firstTextField = alertController.textFields![0] as UITextField
+            
             print(firstTextField.text ?? "")
+            
+            let textCount : Int = (firstTextField.text?.count)!
+            
+            
+            if textCount > 0
+            {
+                let objCoredata = TS_CoredataModel()
+                
+                objCoredata.createNewProject(name: firstTextField.text ?? "")
+            }
+            else
+            {
+                let alert = UIAlertController(title: "Error", message: "Project name should not empty", preferredStyle: UIAlertController.Style.alert)
+
+                let ok = UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: {
+                    (action : UIAlertAction!) -> Void in })
+                
+                alert.addAction(ok)
+                
+                self.present(alert, animated: true, completion: nil)
+
+            }
+            
         })
         let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertAction.Style.default, handler: {
             (action : UIAlertAction!) -> Void in })

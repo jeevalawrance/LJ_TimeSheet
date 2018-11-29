@@ -14,6 +14,7 @@
     </entity>
     <entity name="User" representedClassName="User" syncable="YES" codeGenerationType="class">
         <attribute name="userEmail" attributeType="String" syncable="YES"/>
+        <attribute name="userIsVerified" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="userName" attributeType="String" syncable="YES"/>
         <attribute name="userSurname" attributeType="String" syncable="YES"/>
         <attribute name="userType" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
@@ -22,6 +23,6 @@
     <elements>
         <element name="ProjectList" positionX="19.43359375" positionY="82" width="128" height="120"/>
         <element name="TaskList" positionX="-125.7421875" positionY="-117.88671875" width="128" height="90"/>
-        <element name="User" positionX="-274.34765625" positionY="-53.49609375" width="128" height="120"/>
+        <element name="User" positionX="-274.34765625" positionY="-53.49609375" width="128" height="135"/>
     </elements>
 </model>

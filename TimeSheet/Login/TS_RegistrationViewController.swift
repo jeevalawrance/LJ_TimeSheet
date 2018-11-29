@@ -120,13 +120,17 @@ class TS_RegistrationViewController: UIViewController , PRGValidationFieldDelega
                     
                     let type = self.userType + 1
                     
-                    objCoredata.createUser(name: self.nameField.text ?? "", surName: self.surnameField.text ?? "", mailId: self.emailField.text ?? "", userType: type)
+                    objCoredata.createUser(name: self.nameField.text ?? "", surName: self.surnameField.text ?? "", mailId: self.emailField.text ?? "", userType: type, isNewUser: true)
                     
                     UserDefaults.standard.set(true, forKey: Constant.GlobalConstants.kRegistered)
                     
-                    let appDelegate = UIApplication.shared.delegate as! AppDelegate
-
-                    appDelegate.settingRootViewcontroller()
+//                    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+//
+//                    appDelegate.settingRootViewcontroller()
+                    
+                    let myVC : TS_VerificationViewController = self.storyboard?.instantiateViewController(withIdentifier: "verifyVC") as! TS_VerificationViewController
+                    
+                    self.navigationController?.pushViewController(myVC, animated: true)
                 }
                
             } catch {
