@@ -386,7 +386,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                 <connections>
-                                    <action selector="doneEditing:" destination="13O-iE-st9" eventType="editingDidEnd" id="OT9-8U-m1z"/>
+                                    <outlet property="delegate" destination="13O-iE-st9" id="nvk-p7-ter"/>
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter verification code which is send in your registered email" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ef2-Jp-JM4">
@@ -619,7 +619,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="arrow-down" width="51" height="29"/>
+        <image name="arrow-down" width="51.5" height="29.5"/>
         <image name="launchImage.png" width="621" height="1104"/>
     </resources>
 </document>

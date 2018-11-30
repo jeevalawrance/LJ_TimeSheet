@@ -137,22 +137,50 @@ class TS_CoredataModel: UIViewController {
         return userDetail
         
     }
+    func allProjectsFetchRequest() -> NSFetchRequest<NSFetchRequestResult> {
+        
+        let emailType =  UserDefaults.standard.object(forKey: Constant.GlobalConstants.kEmailId)
+        
+        let data = self.retrieveParticularUser(email: emailType as! String)
+        
+        var objectId : String = ""
+        
+        if data != nil {
+            let objUrl : URL = data.objectID.uriRepresentation()
+            
+            objectId = objUrl.absoluteString
+        }
+
+        let predicate = NSPredicate(format: "userID = %@", objectId)
+
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "ProjectList")
+        fetchRequest.predicate = predicate
+        
+        let sortDescriptor = NSSortDescriptor(key: "projectName", ascending: true)
+        
+        fetchRequest.predicate = nil
+        fetchRequest.sortDescriptors = [sortDescriptor]
+        fetchRequest.fetchBatchSize = 20
+        
+        return fetchRequest
+    }
     
     func createNewProject(name : String) {
         
-        let data = self.retrieveParticularUser(email: Constant.GlobalConstants.kEmailId)
+//        let data = self.retrieveParticularUser(email: Constant.GlobalConstants.kEmailId)
         
-        if ((data as? NSNull) == nil)  {
-            
-        }
-        else
-        {
+        let emailType =  UserDefaults.standard.object(forKey: Constant.GlobalConstants.kEmailId)
+
+        let data = self.retrieveParticularUser(email: emailType as! String)
+        
+     
+        if data != nil {
             let objUrl : URL = data.objectID.uriRepresentation()
             
             let objectId = objUrl.absoluteString
             
             let userType = data.value(forKey: "userType")
-
+            
             let context = appDelegate.persistentContainer.viewContext
             let entity = NSEntityDescription.entity(forEntityName: "ProjectList", in: context)
             let newUser = NSManagedObject(entity: entity!, insertInto: context)
@@ -166,6 +194,11 @@ class TS_CoredataModel: UIViewController {
             } catch {
                 print("Failed saving")
             }
+        }
+        else
+        {
+           
+            
         }
         
     }

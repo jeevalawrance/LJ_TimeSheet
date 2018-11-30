@@ -8,19 +8,16 @@
 
 import UIKit
 
-class TS_VerificationViewController: UIViewController {
+class TS_VerificationViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var txtOtp: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        self.txtOtp.delegate = self as? UITextFieldDelegate
         
         self.title = "Verification"
         // Do any additional setup after loading the view.
     }
-    
-    @IBAction func doneEditing(_ sender: Any)
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool
     {
         txtOtp.resignFirstResponder()
         
@@ -32,8 +29,9 @@ class TS_VerificationViewController: UIViewController {
         let myVC : TS_LoginViewController = self.storyboard?.instantiateViewController(withIdentifier: "loginVC") as! TS_LoginViewController
         
         self.navigationController?.pushViewController(myVC, animated: true)
+        
+        return true
     }
-    
     /*
     // MARK: - Navigation
 
