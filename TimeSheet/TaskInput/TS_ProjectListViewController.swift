@@ -32,6 +32,7 @@ class TS_ProjectListViewController: UIViewController {
     
     var fetchedResultsController: NSFetchedResultsController<NSFetchRequestResult>?
 
+    var context : NSManagedObjectContext?
 
     let objCoredata = TS_CoredataModel()
     
@@ -51,10 +52,10 @@ class TS_ProjectListViewController: UIViewController {
         
         self.tableView.isEditing = true
         
-        let context = appDelegate.persistentContainer.viewContext
+        context = appDelegate.persistentContainer.viewContext
         
         
-        fetchedResultsController = NSFetchedResultsController(fetchRequest: objCoredata.allProjectsFetchRequest(), managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
+        fetchedResultsController = NSFetchedResultsController(fetchRequest: objCoredata.allProjectsFetchRequest(), managedObjectContext: context!, sectionNameKeyPath: nil, cacheName: nil)
         
         fetchedResultsController?.delegate = self as? NSFetchedResultsControllerDelegate
         do {
@@ -91,19 +92,7 @@ class TS_ProjectListViewController: UIViewController {
         
         
     }
-    
-//    func allProjectsFetchRequest() -> NSFetchRequest<NSFetchRequestResult> {
-//
-//        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "ProjectList")
-//        let sortDescriptor = NSSortDescriptor(key: "projectName", ascending: true)
-//
-//        fetchRequest.predicate = nil
-//        fetchRequest.sortDescriptors = [sortDescriptor]
-//        fetchRequest.fetchBatchSize = 20
-//
-//        return fetchRequest
-//    }
-    
+
     // MARK: - USER ACTIONS
     @IBAction func addProjectAction(_ sender: Any)
     {
@@ -149,70 +138,73 @@ class TS_ProjectListViewController: UIViewController {
     }
     
     //MARK: NSFetchedResultsController Delegate Functions
-    /*
-    func controller(controller: NSFetchedResultsController, didChangeSection sectionInfo: NSFetchedResultsSectionInfo, atIndex sectionIndex: Int, forChangeType type: NSFetchedResultsChangeType) {
+    
+    func controller(controller: NSFetchedResultsController<NSFetchRequestResult>, didChangeSection sectionInfo: NSFetchedResultsSectionInfo, atIndex sectionIndex: Int, forChangeType type: NSFetchedResultsChangeType) {
         
         switch type {
-        case NSFetchedResultsChangeType.Insert:
-            tableView.insertSections(NSIndexSet(index: sectionIndex), withRowAnimation: UITableViewRowAnimation.Fade)
+        case NSFetchedResultsChangeType.insert:
+            tableView.insertSections(NSIndexSet(index: sectionIndex) as IndexSet, with: UITableView.RowAnimation.fade)
             break
-        case NSFetchedResultsChangeType.Delete:
-            tableView.deleteSections(NSIndexSet(index: sectionIndex), withRowAnimation: UITableViewRowAnimation.Fade)
+        case NSFetchedResultsChangeType.delete:
+            tableView.deleteSections(NSIndexSet(index: sectionIndex) as IndexSet, with: UITableView.RowAnimation.fade)
             break
-        case NSFetchedResultsChangeType.Move:
+        case NSFetchedResultsChangeType.move:
             break
-        case NSFetchedResultsChangeType.Update:
+        case NSFetchedResultsChangeType.update:
             break
         default:
             break
         }
     }
     
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
+     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCell.EditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == .delete {
         }
         
         switch editingStyle {
-        case .Delete:
-            managedObjectContext?.deleteObject(fetchedResultsController?.objectAtIndexPath(indexPath) as Employee)
-            managedObjectContext?.save(nil)
-        case .Insert:
-            break
-        case .None:
-            break
+        case .delete:
+            context!.delete(fetchedResultsController?.object(at: indexPath as IndexPath) as! ProjectList)
+            do {
+                try context!.save()
+            } catch {
+                print(error)
+            }
+        case .none: break
+            
+        case .insert: break
+            
         }
         
     }
     
-    func controller(controller: NSFetchedResultsController, didChangeObject anObject: AnyObject, atIndexPath indexPath: NSIndexPath?, forChangeType type: NSFetchedResultsChangeType, newIndexPath: NSIndexPath?) {
+    func controller(controller: NSFetchedResultsController<NSFetchRequestResult>, didChangeObject anObject: AnyObject, atIndexPath indexPath: NSIndexPath?, forChangeType type: NSFetchedResultsChangeType, newIndexPath: NSIndexPath?) {
         
         switch type {
-        case NSFetchedResultsChangeType.Insert:
-            tableView.insertRowsAtIndexPaths(NSArray(object: newIndexPath!), withRowAnimation: UITableViewRowAnimation.Fade)
+        case NSFetchedResultsChangeType.insert:
+            tableView.insertRows(at: NSArray(object: newIndexPath!) as! [IndexPath], with: UITableView.RowAnimation.fade)
             break
-        case NSFetchedResultsChangeType.Delete:
-            tableView.deleteRowsAtIndexPaths(NSArray(object: indexPath!), withRowAnimation: UITableViewRowAnimation.Fade)
+        case NSFetchedResultsChangeType.delete:
+            tableView.deleteRows(at: NSArray(object: indexPath!) as! [IndexPath], with: UITableView.RowAnimation.fade)
             break
-        case NSFetchedResultsChangeType.Move:
-            tableView.deleteRowsAtIndexPaths(NSArray(object: indexPath!), withRowAnimation: UITableViewRowAnimation.Fade)
-            tableView.insertRowsAtIndexPaths(NSArray(object: newIndexPath!), withRowAnimation: UITableViewRowAnimation.Fade)
+        case NSFetchedResultsChangeType.move:
+            tableView.deleteRows(at: NSArray(object: indexPath!) as! [IndexPath], with: UITableView.RowAnimation.fade)
+            tableView.insertRows(at: NSArray(object: newIndexPath!) as! [IndexPath], with: UITableView.RowAnimation.fade)
             break
-        case NSFetchedResultsChangeType.Update:
-            tableView.cellForRowAtIndexPath(indexPath!)
+        case NSFetchedResultsChangeType.update:
+            tableView.cellForRow(at: indexPath! as IndexPath)
             break
         default:
             break
         }
     }
     
-    func controllerWillChangeContent(controller: NSFetchedResultsController) {
+    func controllerWillChangeContent(controller: NSFetchedResultsController<NSFetchRequestResult>) {
         tableView.beginUpdates()
     }
     
-    func controllerDidChangeContent(controller: NSFetchedResultsController) {
+    func controllerDidChangeContent(controller: NSFetchedResultsController<NSFetchRequestResult>) {
         tableView.endUpdates()
     }
-    */
     
     @objc func backAction() {
         

@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TimeSheet/Login/TS_VerificationViewController.swift"
-            timestampString = "565268711.153571"
+            timestampString = "565269870.457121"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "29"
@@ -26,7 +26,7 @@
                   moduleName = "TimeSheet"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/apple/Documents/ClientCopy/Timesheet/LJ_TimeSheet/TimeSheet/Login/TS_VerificationViewController.swift"
-                  timestampString = "565268369.6447001"
+                  timestampString = "565269870.6878459"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "29"
@@ -41,7 +41,7 @@
                   moduleName = "TimeSheet"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/apple/Documents/ClientCopy/Timesheet/LJ_TimeSheet/TimeSheet/Login/TS_VerificationViewController.swift"
-                  timestampString = "565268369.647518"
+                  timestampString = "565269870.69099"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "29"
@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TimeSheet/TaskInput/TS_ProjectListViewController.swift"
-            timestampString = "565268711.153651"
+            timestampString = "565269870.457224"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "240"
-            endingLineNumber = "240"
+            startingLineNumber = "244"
+            endingLineNumber = "244"
             landmarkName = "numberOfSectionsInTableView(tableView:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -73,13 +73,45 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "TimeSheet/Model/TS_CoredataModel.swift"
-            timestampString = "565268711.154106"
+            filePath = "TimeSheet/TaskInput/TS_ProjectListViewController.swift"
+            timestampString = "565269870.457821"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "191"
-            endingLineNumber = "191"
-            landmarkName = "createNewProject(name:)"
+            startingLineNumber = "156"
+            endingLineNumber = "156"
+            landmarkName = "controller(controller:didChangeSection:atIndex:forChangeType:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TimeSheet/TaskInput/TS_ProjectListViewController.swift"
+            timestampString = "565269900.5338939"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "194"
+            endingLineNumber = "194"
+            landmarkName = "controller(controller:didChangeObject:atIndexPath:forChangeType:newIndexPath:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TimeSheet/TaskInput/TS_ProjectListViewController.swift"
+            timestampString = "565269902.807814"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "173"
+            endingLineNumber = "173"
+            landmarkName = "tableView(tableView:commitEditingStyle:forRowAtIndexPath:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
