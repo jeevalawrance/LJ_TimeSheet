@@ -165,6 +165,31 @@ class TS_CoredataModel: UIViewController {
         return fetchRequest
     }
     
+    func allTasksFetchRequest(projectId : String) -> NSFetchRequest<NSFetchRequestResult> {
+        
+//        let data = self.retrieveParticularUser(email: projectId as! String)
+//        
+//        var objectId : String = ""
+//        
+//        if data != nil {
+//            let objUrl : URL = data.objectID.uriRepresentation()
+//            
+//            objectId = objUrl.absoluteString
+//        }
+//        
+        let predicate = NSPredicate(format: "userID = %@", projectId)
+        
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "TaskList")
+        fetchRequest.predicate = predicate
+        
+        let sortDescriptor = NSSortDescriptor(key: "taskName", ascending: true)
+        
+        fetchRequest.predicate = nil
+        fetchRequest.sortDescriptors = [sortDescriptor]
+        fetchRequest.fetchBatchSize = 20
+        
+        return fetchRequest
+    }
     func createNewProject(name : String) {
         
 //        let data = self.retrieveParticularUser(email: Constant.GlobalConstants.kEmailId)

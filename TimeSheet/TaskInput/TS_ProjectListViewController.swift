@@ -36,13 +36,13 @@ class TS_ProjectListViewController: UIViewController {
 
     let objCoredata = TS_CoredataModel()
     
-    var headlines = [
-        Headline(id: 1, title: "Lorem Ipsum", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque id ornare tortor, quis dictum enim. Morbi convallis tincidunt quam eget bibendum. Suspendisse malesuada maximus ante, at molestie massa fringilla id.", image: "Apple"),
-        Headline(id: 2, title: "Aenean condimentum", text: "Ut eget massa erat. Morbi mauris diam, vulputate at luctus non, finibus et diam. Morbi et felis a lacus pharetra blandit.", image: "Banana"),
-        Headline(id: 3, title: "In ac ante sapien", text: "Aliquam egestas ultricies dapibus. Nam molestie nunc in ipsum vehicula accumsan quis sit amet quam. Sed vel feugiat eros.", image: "Cantaloupe"),
-        ]
+//    var headlines = [
+//        Headline(id: 1, title: "Lorem Ipsum", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque id ornare tortor, quis dictum enim. Morbi convallis tincidunt quam eget bibendum. Suspendisse malesuada maximus ante, at molestie massa fringilla id.", image: "Apple"),
+//        Headline(id: 2, title: "Aenean condimentum", text: "Ut eget massa erat. Morbi mauris diam, vulputate at luctus non, finibus et diam. Morbi et felis a lacus pharetra blandit.", image: "Banana"),
+//        Headline(id: 3, title: "In ac ante sapien", text: "Aliquam egestas ultricies dapibus. Nam molestie nunc in ipsum vehicula accumsan quis sit amet quam. Sed vel feugiat eros.", image: "Cantaloupe"),
+//        ]
+//
     
-     
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -50,7 +50,7 @@ class TS_ProjectListViewController: UIViewController {
         
         self.btnAddProject.accessibilityLabel = "addproject";
         
-        self.tableView.isEditing = true
+//        self.tableView.isEditing = true
         
         context = appDelegate.persistentContainer.viewContext
         
@@ -64,7 +64,7 @@ class TS_ProjectListViewController: UIViewController {
             print(error)
         }
         
-        if fetchedResultsController?.fetchedObjects?.count == 0
+        if fetchedResultsController?.fetchedObjects?.count == 0 || fetchedResultsController?.fetchedObjects == nil
         {
             viewProject.isHidden = true
         }
@@ -244,10 +244,6 @@ extension TS_ProjectListViewController : UITableViewDataSource
     }
 
     
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return headlines.count
-//    }
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "projectCell", for: indexPath)
         
@@ -268,6 +264,7 @@ extension TS_ProjectListViewController : UITableViewDataSource
         
         return cell
     }
+    /*
     func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
         return .none
     }
@@ -285,8 +282,16 @@ extension TS_ProjectListViewController : UITableViewDataSource
 //        headlines.insert(movedObject, at: destinationIndexPath.row)
 
     }
+    */
 }
 extension TS_ProjectListViewController : UITableViewDelegate
 {
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let taskVC = self.storyboard?.instantiateViewController(withIdentifier: "taskInputVC") as! TS_TaskViewController
+        taskVC.objProjectDetail = fetchedResultsController?.object(at: indexPath) as? ProjectList
+        self.navigationController?.pushViewController(taskVC, animated: true)
+        
+    }
+//    taskInputVC
 }
