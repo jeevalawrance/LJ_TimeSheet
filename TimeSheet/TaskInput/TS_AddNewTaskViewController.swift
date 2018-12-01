@@ -48,7 +48,14 @@ class TS_AddNewTaskViewController: UIViewController {
     {
     }
     
-    @IBAction func projectListAction(_ sender: Any) {
+    @IBAction func projectListAction(_ sender: Any)
+    {
+        let storyboard:UIStoryboard = UIStoryboard(name: "TaskInput", bundle: nil)
+        let myVC = storyboard.instantiateViewController(withIdentifier: "TS_ProjectListViewControllerVC") as! TS_ProjectListViewController
+        myVC.fromView = ProjectType.FromTask
+        self.navigationController?.pushViewController(myVC, animated: true)
+
+//        ProjectType
     }
     @objc func backAction() {
         

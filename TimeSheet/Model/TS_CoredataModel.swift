@@ -140,6 +140,8 @@ class TS_CoredataModel: UIViewController {
     func allProjectsFetchRequest() -> NSFetchRequest<NSFetchRequestResult> {
         
         let emailType =  UserDefaults.standard.object(forKey: Constant.GlobalConstants.kEmailId)
+//        let userType : Int = UserDefaults.standard.object(forKey: Constant.GlobalConstants.kUserType) as! Int
+
         
         let data = self.retrieveParticularUser(email: emailType as! String)
         

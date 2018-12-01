@@ -84,7 +84,7 @@ class TS_TaskViewController: UIViewController {
             viewProject.isHidden = false
             viewForce.isHidden = false
         }
-        
+        self.tableView.reloadData()
 
     }
     

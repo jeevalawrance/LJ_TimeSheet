@@ -68,7 +68,7 @@ class TS_RegistrationViewController: UIViewController , PRGValidationFieldDelega
             self.categoryType = item as NSString
             self.lblUserType.text = "  \(item)"
             
-            self.userType =  index
+            self.userType =  index + 1
         }
         
         // Will set a custom width instead of the anchor view width
@@ -118,7 +118,21 @@ class TS_RegistrationViewController: UIViewController , PRGValidationFieldDelega
                 {
                     let objCoredata = TS_CoredataModel()
                     
-                    let type = self.userType + 1
+                    let type = self.userType
+                    
+                    if type == 0
+                    {
+                        let alertController = UIAlertController(title: "Error", message: "Please select user type", preferredStyle: .alert)
+                        
+                        
+                        let action3 = UIAlertAction(title: "OK", style: .destructive) { (action:UIAlertAction) in
+                            print("You've pressed the destructive");
+                        }
+                        alertController.addAction(action3)
+                        self.present(alertController, animated: true, completion: nil)
+                        
+                        return
+                    }
                     
                     objCoredata.createUser(name: self.nameField.text ?? "", surName: self.surnameField.text ?? "", mailId: self.emailField.text ?? "", userType: type, isNewUser: true)
                     

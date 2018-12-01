@@ -17,6 +17,13 @@ struct Headline {
     var image : String
     
 }
+enum ProjectType : Int {
+    case FromTask
+    case FromTaskWise
+    case FromDashBoard
+//    case TaskInput
+//    case Activity
+}
 
 class TS_ProjectListViewController: UIViewController {
     @IBOutlet var lblNoProject: UILabel!
@@ -27,6 +34,8 @@ class TS_ProjectListViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     @IBOutlet weak var viewProject: UIView!
+    
+    var fromView : ProjectType!
     
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
@@ -288,9 +297,12 @@ extension TS_ProjectListViewController : UITableViewDelegate
 {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let taskVC = self.storyboard?.instantiateViewController(withIdentifier: "taskInputVC") as! TS_TaskViewController
-        taskVC.objProjectDetail = fetchedResultsController?.object(at: indexPath) as? ProjectList
-        self.navigationController?.pushViewController(taskVC, animated: true)
+        if fromView == ProjectType.FromDashBoard {
+         
+            let taskVC = self.storyboard?.instantiateViewController(withIdentifier: "taskInputVC") as! TS_TaskViewController
+            taskVC.objProjectDetail = fetchedResultsController?.object(at: indexPath) as? ProjectList
+            self.navigationController?.pushViewController(taskVC, animated: true)
+        }
         
     }
 //    taskInputVC

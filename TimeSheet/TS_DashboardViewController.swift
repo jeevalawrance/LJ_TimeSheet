@@ -192,16 +192,15 @@ extension TS_DashboardViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print(indexPath.item + 1)
         
-        let storyboard:UIStoryboard = UIStoryboard(name: "TaskInput", bundle: nil)
-//        let navigationController : UINavigationController = storyboard.instantiateViewController(withIdentifier: "mainRootNav") as! UINavigationController
+        let headline : DashBoardMenuType = self.dashArray[indexPath.row] as! DashBoardMenuType
 
-//        let taskVC = storyboard.instantiateViewController(withIdentifier: "taskInputVC") as! TS_TaskViewController
-//
-//        self.navigationController?.pushViewController(taskVC, animated: true)
-        
-        
-        let myVC = storyboard.instantiateViewController(withIdentifier: "TS_ProjectListViewControllerVC") as! TS_ProjectListViewController
-        self.navigationController?.pushViewController(myVC, animated: true)
+        if headline.id == DashBoardMenu.TaskInput.rawValue {
+         
+            let storyboard:UIStoryboard = UIStoryboard(name: "TaskInput", bundle: nil)
+            let myVC = storyboard.instantiateViewController(withIdentifier: "TS_ProjectListViewControllerVC") as! TS_ProjectListViewController
+            myVC.fromView = ProjectType.FromDashBoard
+            self.navigationController?.pushViewController(myVC, animated: true)
+        }
         
     }
 }
