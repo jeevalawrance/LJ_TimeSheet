@@ -153,7 +153,9 @@ class TS_CoredataModel: UIViewController {
             objectId = objUrl.absoluteString
         }
 
-        let predicate = NSPredicate(format: "userID = %@", objectId)
+        let predicate = NSPredicate(format: "userID = %@", emailType as! CVarArg)
+
+//        let predicate = NSPredicate(format: "objectID = %@", objectId)
 
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "ProjectList")
         fetchRequest.predicate = predicate
@@ -212,7 +214,8 @@ class TS_CoredataModel: UIViewController {
             let entity = NSEntityDescription.entity(forEntityName: "ProjectList", in: context)
             let newUser = NSManagedObject(entity: entity!, insertInto: context)
             newUser.setValue(name, forKey: "projectName")
-            newUser.setValue(objectId, forKey: "userID")
+//            newUser.setValue(objectId, forKey: "userID")
+            newUser.setValue(emailType, forKey: "userID")
             newUser.setValue(userType, forKey: "userType")
             //        newUser.setValue("1", forKey: "userType")
             do {

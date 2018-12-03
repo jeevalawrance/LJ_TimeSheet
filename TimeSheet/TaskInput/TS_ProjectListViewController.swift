@@ -105,6 +105,13 @@ class TS_ProjectListViewController: UIViewController {
     // MARK: - USER ACTIONS
     @IBAction func addProjectAction(_ sender: Any)
     {
+        
+        let taskVC = self.storyboard?.instantiateViewController(withIdentifier: "AppProjectTitleVC") as! TS_AddProjectTitleVC
+        self.navigationController?.pushViewController(taskVC, animated: true)
+
+        
+        return
+        
         let alertController = UIAlertController(title: "Project name", message: "", preferredStyle: UIAlertController.Style.alert)
         alertController.addTextField { (textField : UITextField!) -> Void in
             textField.placeholder = "Enter project name"

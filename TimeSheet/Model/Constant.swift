@@ -51,7 +51,8 @@ class Constant: NSObject {
         
         static let kOrganizationFullName          =    "FullName"
         
-        
+        static let kGoogleServerKey  = "AIzaSyCORlYxTdokMz0q6XbzTE5tvwHvBGd5SA8"
+
     }
     
     func UIColorFromRGB(rgbValue: UInt) -> UIColor {
