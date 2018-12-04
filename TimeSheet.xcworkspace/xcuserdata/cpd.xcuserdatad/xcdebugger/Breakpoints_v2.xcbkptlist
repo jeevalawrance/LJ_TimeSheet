@@ -25,8 +25,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "53"
             endingLineNumber = "53"
-            landmarkName = "TS_TaskViewController"
-            landmarkType = "3">
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -67,13 +67,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "TimeSheet/Model/TS_CoredataModel.swift"
-            timestampString = "565185864.42305"
+            filePath = "TimeSheet/Mapview/TS_LocationViewController.swift"
+            timestampString = "565611022.686244"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "145"
-            endingLineNumber = "145"
-            landmarkName = "createNewProject(name:)"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "lookUpCurrentLocation(completionHandler:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -83,29 +83,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "TimeSheet/Model/TS_CoredataModel.swift"
-            timestampString = "565185864.423105"
+            filePath = "TimeSheet/Mapview/TS_LocationViewController.swift"
+            timestampString = "565611055.574271"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "161"
-            endingLineNumber = "161"
-            landmarkName = "createNewProject(name:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TimeSheet/AppDelegate.swift"
-            timestampString = "565173886.873221"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "21"
-            endingLineNumber = "21"
-            landmarkName = "application(_:didFinishLaunchingWithOptions:)"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "lookUpCurrentLocation(completionHandler:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

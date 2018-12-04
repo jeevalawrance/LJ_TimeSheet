@@ -20,6 +20,10 @@ class TS_LoginViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        self.navigationItem.backBarButtonItem?.title = ""
+        
+
     }
     
     func isValidEmail(email:String?) -> Bool {

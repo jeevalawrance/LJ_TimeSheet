@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		122C4F4130C41B98C9889367 /* Pods_TimeSheet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A03EC619401E7FA6BDF2FA6E /* Pods_TimeSheet.framework */; };
+		1306FA8721B1C23700409204 /* TS_AddNewTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1306FA8621B1C23700409204 /* TS_AddNewTaskViewController.swift */; };
+		13D4626A21B50E240036A5B0 /* TS_LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D4626921B50E240036A5B0 /* TS_LocationViewController.swift */; };
+		13D4626C21B50EFA0036A5B0 /* reload_location.png in Resources */ = {isa = PBXBuildFile; fileRef = 13D4626B21B50EFA0036A5B0 /* reload_location.png */; };
+		13D4626E21B5155F0036A5B0 /* TS_AddProjectTitleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D4626D21B5155F0036A5B0 /* TS_AddProjectTitleVC.swift */; };
 		EF05BD7B21AFCCB00047E823 /* TS_VerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF05BD7A21AFCCB00047E823 /* TS_VerificationViewController.swift */; };
 		EF073C1721A1B312009A0A27 /* TS_CoredataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF073C1621A1B312009A0A27 /* TS_CoredataModel.swift */; };
 		EF073C1921A1CE2B009A0A27 /* TS_LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF073C1821A1CE2B009A0A27 /* TS_LoginViewController.swift */; };
@@ -52,6 +56,10 @@
 
 /* Begin PBXFileReference section */
 		06010F9BC68F47BEFDDF0EBE /* Pods-TimeSheet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeSheet.release.xcconfig"; path = "Target Support Files/Pods-TimeSheet/Pods-TimeSheet.release.xcconfig"; sourceTree = "<group>"; };
+		1306FA8621B1C23700409204 /* TS_AddNewTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TS_AddNewTaskViewController.swift; sourceTree = "<group>"; };
+		13D4626921B50E240036A5B0 /* TS_LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TS_LocationViewController.swift; sourceTree = "<group>"; };
+		13D4626B21B50EFA0036A5B0 /* reload_location.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reload_location.png; sourceTree = "<group>"; };
+		13D4626D21B5155F0036A5B0 /* TS_AddProjectTitleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TS_AddProjectTitleVC.swift; sourceTree = "<group>"; };
 		3869E15CEE37EF5488EF42A2 /* Pods-TimeSheet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeSheet.debug.xcconfig"; path = "Target Support Files/Pods-TimeSheet/Pods-TimeSheet.debug.xcconfig"; sourceTree = "<group>"; };
 		A03EC619401E7FA6BDF2FA6E /* Pods_TimeSheet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TimeSheet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF05BD7721AEA2AF0047E823 /* TimeSheet.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TimeSheet.entitlements; sourceTree = "<group>"; };
@@ -68,7 +76,7 @@
 		EF20DF08219C0A02000FAD7E /* TimeSheet.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TimeSheet.xcdatamodel; sourceTree = "<group>"; };
 		EF20DF0A219C0A05000FAD7E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EF20DF0D219C0A05000FAD7E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		EF20DF36219C0B80000FAD7E /* TS_MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TS_MapViewController.swift; sourceTree = "<group>"; };
+		EF20DF36219C0B80000FAD7E /* TS_MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TS_MapViewController.swift; path = ../TS_MapViewController.swift; sourceTree = "<group>"; };
 		EF20DF38219C0D2A000FAD7E /* AnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnnotationView.swift; sourceTree = "<group>"; };
 		EF20DF3A219C0D57000FAD7E /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		EF20DF3E219C0F36000FAD7E /* Cluster.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Cluster.h; sourceTree = "<group>"; };
@@ -112,6 +120,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		13D4626821B50DFF0036A5B0 /* Mapview */ = {
+			isa = PBXGroup;
+			children = (
+				EF20DF36219C0B80000FAD7E /* TS_MapViewController.swift */,
+				13D4626921B50E240036A5B0 /* TS_LocationViewController.swift */,
+			);
+			path = Mapview;
+			sourceTree = "<group>";
+		};
 		1EC925CE26BCACE818CEA576 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -134,6 +151,7 @@
 			children = (
 				EF0AD133219C978000B85839 /* launchImage@2x.png */,
 				EF0AD134219C978000B85839 /* launchImage@3x.png */,
+				13D4626B21B50EFA0036A5B0 /* reload_location.png */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -159,16 +177,16 @@
 		EF20DEFF219C0A02000FAD7E /* TimeSheet */ = {
 			isa = PBXGroup;
 			children = (
+				13D4626821B50DFF0036A5B0 /* Mapview */,
 				EF05BD7721AEA2AF0047E823 /* TimeSheet.entitlements */,
 				EF895BC321A0091B00EDA0CA /* TaskInput */,
 				EFB6FEB5219FE88A00C58932 /* Model */,
 				EF2F2495219F3C3C001AE3FC /* Cell */,
 				EF20DF62219C3098000FAD7E /* Login */,
+				EF9DEA04219EBDCB000C25F7 /* Storyboard */,
 				EF20DF00219C0A02000FAD7E /* AppDelegate.swift */,
 				EF20DF02219C0A02000FAD7E /* ViewController.swift */,
-				EF20DF36219C0B80000FAD7E /* TS_MapViewController.swift */,
 				EF9DEA05219EC807000C25F7 /* TS_DashboardViewController.swift */,
-				EF9DEA04219EBDCB000C25F7 /* Storyboard */,
 				EF20DF38219C0D2A000FAD7E /* AnnotationView.swift */,
 				EF0AD137219C9B0900B85839 /* TS_LandingViewController.swift */,
 				EF20DF3A219C0D57000FAD7E /* Extensions.swift */,
@@ -237,6 +255,8 @@
 			children = (
 				EF895BC421A0093C00EDA0CA /* TS_TaskViewController.swift */,
 				EF807CAD21A174EF009A7C7B /* TS_ProjectListViewController.swift */,
+				1306FA8621B1C23700409204 /* TS_AddNewTaskViewController.swift */,
+				13D4626D21B5155F0036A5B0 /* TS_AddProjectTitleVC.swift */,
 			);
 			path = TaskInput;
 			sourceTree = "<group>";
@@ -333,6 +353,7 @@
 				EF20DF5D219C3061000FAD7E /* Nunito-Light.ttf in Resources */,
 				EF20DF5E219C3061000FAD7E /* Nunito-Regular.ttf in Resources */,
 				EF20DF5F219C3061000FAD7E /* Nunito-SemiBold.ttf in Resources */,
+				13D4626C21B50EFA0036A5B0 /* reload_location.png in Resources */,
 				EF20DF70219C30E6000FAD7E /* PRGValidationField.xib in Resources */,
 				EF20DF73219C30E6000FAD7E /* PRGVFValid.png in Resources */,
 				EFBFE07E21A2D96600B84137 /* Info.plist in Resources */,
@@ -408,6 +429,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13D4626A21B50E240036A5B0 /* TS_LocationViewController.swift in Sources */,
 				EF9DEA06219EC807000C25F7 /* TS_DashboardViewController.swift in Sources */,
 				EF20DF37219C0B80000FAD7E /* TS_MapViewController.swift in Sources */,
 				EF0AD138219C9B0900B85839 /* TS_LandingViewController.swift in Sources */,
@@ -416,9 +438,11 @@
 				EF20DF71219C30E6000FAD7E /* PRGValidationField.swift in Sources */,
 				EF895BC521A0093C00EDA0CA /* TS_TaskViewController.swift in Sources */,
 				EF20DF39219C0D2A000FAD7E /* AnnotationView.swift in Sources */,
+				1306FA8721B1C23700409204 /* TS_AddNewTaskViewController.swift in Sources */,
 				EF05BD7B21AFCCB00047E823 /* TS_VerificationViewController.swift in Sources */,
 				EFB6FEB7219FED3C00C58932 /* TS_DashboardModel.swift in Sources */,
 				EF20DF01219C0A02000FAD7E /* AppDelegate.swift in Sources */,
+				13D4626E21B5155F0036A5B0 /* TS_AddProjectTitleVC.swift in Sources */,
 				EF807CAE21A174EF009A7C7B /* TS_ProjectListViewController.swift in Sources */,
 				EF073C1721A1B312009A0A27 /* TS_CoredataModel.swift in Sources */,
 				EF2F2497219F3D5B001AE3FC /* TS_DashboardCellCollectionViewCell.swift in Sources */,

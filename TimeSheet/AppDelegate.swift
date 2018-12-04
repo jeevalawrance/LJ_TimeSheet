@@ -50,7 +50,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        [[UINavigationBar appearance] setTranslucent:NO];
 //        [UINavigationBar appearance].tintColor = [UIColor whiteColor];
     }
-    
+    func settingLandingViewcontroller()  {
+        
+        let storyboard = UIStoryboard(name: "Login", bundle: nil)
+        let rootView : UINavigationController = storyboard.instantiateViewController(withIdentifier: "landRootNav") as! UINavigationController
+        
+        UIView.transition(with: self.window!, duration: 0.3, options: .transitionCrossDissolve, animations: {
+            self.window!.rootViewController = rootView
+        }, completion: { completed in
+            // maybe do something here
+        })
+    }
     func settingRootViewcontroller()  {
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
