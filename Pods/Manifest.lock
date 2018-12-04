@@ -1,20 +1,24 @@
 PODS:
+  - Alamofire (4.7.3)
   - Cluster (2.4.0)
   - DropDown (2.3.12)
 
 DEPENDENCIES:
+  - Alamofire (~> 4.7)
   - Cluster
   - DropDown
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Alamofire
     - Cluster
     - DropDown
 
 SPEC CHECKSUMS:
+  Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
   Cluster: ea2d5e7b258ecd65af5aefc6c37ad94798213a42
   DropDown: 0bcc278799ec11a3d34ce1aac9367fbbaf5423d9
 
-PODFILE CHECKSUM: bbdc60405374c73bc81400f80d62ecc3fa40d3ab
+PODFILE CHECKSUM: d96c4e7ce205d9d8c2b033205ffe4ced63a645e0
 
 COCOAPODS: 1.6.0.beta.1

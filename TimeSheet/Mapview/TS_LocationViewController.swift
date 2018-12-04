@@ -9,6 +9,7 @@
 import UIKit
 import MapKit
 import CoreLocation
+import Alamofire
 
 class TS_LocationViewController: UIViewController {
     @IBOutlet weak var mapView: MKMapView!
@@ -24,6 +25,7 @@ class TS_LocationViewController: UIViewController {
 //    @property (weak, nonatomic) IBOutlet NSLayoutConstraint *mapViewBottomConstraint;
     
     let locationManager = CLLocationManager()
+    let userCurrentLocation : CLLocation = CLLocation.init(latitude: 25.276987, longitude: 55.296249)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,9 +37,42 @@ class TS_LocationViewController: UIViewController {
         
         locationManager.requestLocation()
     }
+    // With Alamofire
+    func fetchNearestLocation(){//(completion: @escaping ([RemoteRoom]?) -> Void) {
+        
+        let strUrl = String(format: "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=%f,%f&radius=5000&sensor=true&key=%@",(userCurrentLocation.coordinate.latitude),userCurrentLocation.coordinate.longitude,Constant.GlobalConstants.kGoogleServerKey)
+        //        NSString *strUrl = [NSString stringWithFormat:@"https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=%f,%f&radius=5000&sensor=true&key=%@",userCurrentLocation.coordinate.latitude,userCurrentLocation.coordinate.longitude,kGoogleServerKey];
+
+        guard let url = URL(string: strUrl) else {
+//            completion(nil)
+            return
+        }
+        Alamofire.request(url,
+                          method: .get,
+                          parameters: ["include_docs": "true"])
+            .validate()
+            .responseJSON { response in
+                guard response.result.isSuccess else {
+//                    print("Error while fetching remote rooms: \(String(describing: response.result.error)")
+//                        completion(nil)
+                    return
+                }
+                
+                guard let value = response.result.value as? [String: Any],
+                    let rows = value["rows"] as? [[String: Any]] else {
+                        print("Malformed data received from fetchAllRooms service")
+//                        completion(nil)
+                        return
+                }
+                
+//                let rooms = rows.flatMap { roomDict in return RemoteRoom(jsonData: roomDict) }
+//                completion(rooms)
+        }
+    }
+    
     /*
     // With URLSession
-    public func fetchAllRooms() {
+    public func fetchAllRooms(){//(completion: @escaping ([RemoteRoom]?) -> Void) {
         
 //        NSString *strUrl = [NSString stringWithFormat:@"https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=%f,%f&radius=5000&sensor=true&key=%@",userCurrentLocation.coordinate.latitude,userCurrentLocation.coordinate.longitude,kGoogleServerKey];
 
@@ -206,9 +241,11 @@ extension TS_LocationViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let lat = locations.last?.coordinate.latitude, let long = locations.last?.coordinate.longitude {
             print("\(lat),\(long)")
-            lookUpCurrentLocation { geoLoc in
-                print(geoLoc?.locality ?? "unknown Geo location")
-            }
+//            lookUpCurrentLocation { geoLoc in
+//                print(geoLoc?.locality ?? "unknown Geo location")
+//            }
+            
+            self.fetchNearestLocation()
         } else {
             print("No coordinates")
         }
