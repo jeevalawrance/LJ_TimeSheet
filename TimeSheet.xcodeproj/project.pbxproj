@@ -9,9 +9,11 @@
 /* Begin PBXBuildFile section */
 		122C4F4130C41B98C9889367 /* Pods_TimeSheet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A03EC619401E7FA6BDF2FA6E /* Pods_TimeSheet.framework */; };
 		1306FA8721B1C23700409204 /* TS_AddNewTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1306FA8621B1C23700409204 /* TS_AddNewTaskViewController.swift */; };
+		1389426621BA8A9200A5CB1F /* TS_LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1389426521BA8A9200A5CB1F /* TS_LocationCell.swift */; };
 		13D4626A21B50E240036A5B0 /* TS_LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D4626921B50E240036A5B0 /* TS_LocationViewController.swift */; };
 		13D4626C21B50EFA0036A5B0 /* reload_location.png in Resources */ = {isa = PBXBuildFile; fileRef = 13D4626B21B50EFA0036A5B0 /* reload_location.png */; };
 		13D4626E21B5155F0036A5B0 /* TS_AddProjectTitleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D4626D21B5155F0036A5B0 /* TS_AddProjectTitleVC.swift */; };
+		13FBCF4321BA72B600385CB7 /* TS_LocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13FBCF4221BA72B600385CB7 /* TS_LocationModel.swift */; };
 		EF05BD7B21AFCCB00047E823 /* TS_VerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF05BD7A21AFCCB00047E823 /* TS_VerificationViewController.swift */; };
 		EF073C1721A1B312009A0A27 /* TS_CoredataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF073C1621A1B312009A0A27 /* TS_CoredataModel.swift */; };
 		EF073C1921A1CE2B009A0A27 /* TS_LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF073C1821A1CE2B009A0A27 /* TS_LoginViewController.swift */; };
@@ -57,9 +59,11 @@
 /* Begin PBXFileReference section */
 		06010F9BC68F47BEFDDF0EBE /* Pods-TimeSheet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeSheet.release.xcconfig"; path = "Target Support Files/Pods-TimeSheet/Pods-TimeSheet.release.xcconfig"; sourceTree = "<group>"; };
 		1306FA8621B1C23700409204 /* TS_AddNewTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TS_AddNewTaskViewController.swift; sourceTree = "<group>"; };
+		1389426521BA8A9200A5CB1F /* TS_LocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TS_LocationCell.swift; sourceTree = "<group>"; };
 		13D4626921B50E240036A5B0 /* TS_LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TS_LocationViewController.swift; sourceTree = "<group>"; };
 		13D4626B21B50EFA0036A5B0 /* reload_location.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reload_location.png; sourceTree = "<group>"; };
 		13D4626D21B5155F0036A5B0 /* TS_AddProjectTitleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TS_AddProjectTitleVC.swift; sourceTree = "<group>"; };
+		13FBCF4221BA72B600385CB7 /* TS_LocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TS_LocationModel.swift; sourceTree = "<group>"; };
 		3869E15CEE37EF5488EF42A2 /* Pods-TimeSheet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeSheet.debug.xcconfig"; path = "Target Support Files/Pods-TimeSheet/Pods-TimeSheet.debug.xcconfig"; sourceTree = "<group>"; };
 		A03EC619401E7FA6BDF2FA6E /* Pods_TimeSheet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TimeSheet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF05BD7721AEA2AF0047E823 /* TimeSheet.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TimeSheet.entitlements; sourceTree = "<group>"; };
@@ -246,6 +250,7 @@
 			isa = PBXGroup;
 			children = (
 				EF2F2496219F3D5B001AE3FC /* TS_DashboardCellCollectionViewCell.swift */,
+				1389426521BA8A9200A5CB1F /* TS_LocationCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -276,6 +281,7 @@
 			children = (
 				EFB6FEB6219FED3C00C58932 /* TS_DashboardModel.swift */,
 				EF073C1621A1B312009A0A27 /* TS_CoredataModel.swift */,
+				13FBCF4221BA72B600385CB7 /* TS_LocationModel.swift */,
 				EF9DEA07219ECA58000C25F7 /* Constant.swift */,
 			);
 			path = Model;
@@ -442,6 +448,8 @@
 				EF20DF39219C0D2A000FAD7E /* AnnotationView.swift in Sources */,
 				1306FA8721B1C23700409204 /* TS_AddNewTaskViewController.swift in Sources */,
 				EF05BD7B21AFCCB00047E823 /* TS_VerificationViewController.swift in Sources */,
+				13FBCF4321BA72B600385CB7 /* TS_LocationModel.swift in Sources */,
+				1389426621BA8A9200A5CB1F /* TS_LocationCell.swift in Sources */,
 				EFB6FEB7219FED3C00C58932 /* TS_DashboardModel.swift in Sources */,
 				EF20DF01219C0A02000FAD7E /* AppDelegate.swift in Sources */,
 				13D4626E21B5155F0036A5B0 /* TS_AddProjectTitleVC.swift in Sources */,

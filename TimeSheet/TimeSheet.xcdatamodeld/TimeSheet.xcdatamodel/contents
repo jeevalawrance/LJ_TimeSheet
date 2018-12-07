@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14460.32" systemVersion="18B75" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="ProjectList" representedClassName="ProjectList" syncable="YES" codeGenerationType="class">
+        <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="longtitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="placeName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="projectName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="userID" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="userType" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
@@ -22,7 +26,7 @@
         <relationship name="projectList" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ProjectList" inverseName="user" inverseEntity="ProjectList" syncable="YES"/>
     </entity>
     <elements>
-        <element name="ProjectList" positionX="19.43359375" positionY="82" width="128" height="120"/>
+        <element name="ProjectList" positionX="19.43359375" positionY="82" width="128" height="180"/>
         <element name="TaskList" positionX="-125.7421875" positionY="-117.88671875" width="128" height="105"/>
         <element name="User" positionX="-274.34765625" positionY="-53.49609375" width="128" height="135"/>
     </elements>

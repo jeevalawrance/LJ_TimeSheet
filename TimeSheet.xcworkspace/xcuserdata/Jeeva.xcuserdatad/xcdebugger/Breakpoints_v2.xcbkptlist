@@ -26,7 +26,7 @@
                   moduleName = "TimeSheet"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/apple/Documents/ClientCopy/Timesheet/LJ_TimeSheet/TimeSheet/Login/TS_VerificationViewController.swift"
-                  timestampString = "565472200.697495"
+                  timestampString = "565906900.194568"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "29"
@@ -41,7 +41,7 @@
                   moduleName = "TimeSheet"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/apple/Documents/ClientCopy/Timesheet/LJ_TimeSheet/TimeSheet/Login/TS_VerificationViewController.swift"
-                  timestampString = "565472200.699928"
+                  timestampString = "565906900.197085"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "29"
@@ -74,7 +74,7 @@
                   moduleName = "TimeSheet"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/apple/Documents/ClientCopy/Timesheet/LJ_TimeSheet/TimeSheet/TaskInput/TS_TaskViewController.swift"
-                  timestampString = "565472200.820356"
+                  timestampString = "565906900.3182321"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "94"
@@ -89,7 +89,7 @@
                   moduleName = "TimeSheet"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/apple/Documents/ClientCopy/Timesheet/LJ_TimeSheet/TimeSheet/TaskInput/TS_TaskViewController.swift"
-                  timestampString = "565472200.8231241"
+                  timestampString = "565906900.32152"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "94"
@@ -138,13 +138,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TimeSheet/Model/TS_CoredataModel.swift"
-            timestampString = "565472200.491927"
+            timestampString = "565906899.912414"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "193"
             endingLineNumber = "193"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "allTasksFetchRequest(projectId:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -154,29 +154,77 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TimeSheet/Model/TS_CoredataModel.swift"
-            timestampString = "565472200.492398"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "153"
-            endingLineNumber = "153"
-            landmarkName = "unknown"
-            landmarkType = "0">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TimeSheet/Model/TS_CoredataModel.swift"
-            timestampString = "565472200.492697"
+            timestampString = "565906899.913005"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "204"
             endingLineNumber = "204"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "createNewProject(name:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TimeSheet/Mapview/TS_LocationViewController.swift"
+            timestampString = "565906899.913461"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "173"
+            endingLineNumber = "173"
+            landmarkName = "fetchNearestLocation()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TimeSheet/Mapview/TS_LocationViewController.swift"
+            timestampString = "565906899.913553"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "151"
+            endingLineNumber = "151"
+            landmarkName = "fetchNearestLocation()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TimeSheet/Mapview/TS_LocationViewController.swift"
+            timestampString = "565906899.913618"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "156"
+            endingLineNumber = "156"
+            landmarkName = "fetchNearestLocation()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TimeSheet/Mapview/TS_LocationViewController.swift"
+            timestampString = "565906899.913679"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "142"
+            endingLineNumber = "142"
+            landmarkName = "fetchNearestLocation()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -186,13 +234,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TimeSheet/Model/TS_CoredataModel.swift"
-            timestampString = "565472200.4929841"
+            timestampString = "565906899.914003"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "161"
-            endingLineNumber = "161"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            startingLineNumber = "258"
+            endingLineNumber = "258"
+            landmarkName = "createNewProject(name:location:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

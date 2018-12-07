@@ -232,6 +232,45 @@ class TS_CoredataModel: UIViewController {
         }
         
     }
+    
+    func createNewProject(name : String, location : TS_LocationModel) {
+        
+        let emailType =  UserDefaults.standard.object(forKey: Constant.GlobalConstants.kEmailId)
+        
+        let data = self.retrieveParticularUser(email: emailType as! String)
+        
+        if data != nil {
+            let objUrl : URL = data.objectID.uriRepresentation()
+            
+//            let objectId = objUrl.absoluteString
+            
+            let userType = data.value(forKey: "userType")
+            
+            let context = appDelegate.persistentContainer.viewContext
+            let entity = NSEntityDescription.entity(forEntityName: "ProjectList", in: context)
+            let newUser = NSManagedObject(entity: entity!, insertInto: context)
+            newUser.setValue(name, forKey: "projectName")
+            newUser.setValue(location.address, forKey: "address")
+            newUser.setValue(location.locationName, forKey: "placeName")
+            newUser.setValue(location.latitude, forKey: "latitude")
+            newUser.setValue(location.longitude, forKey: "longtitude")
+            newUser.setValue(emailType, forKey: "userID")
+            newUser.setValue(userType, forKey: "userType")
+            //        newUser.setValue("1", forKey: "userType")
+            do {
+                try context.save()
+                
+            } catch {
+                print("Failed saving")
+            }
+        }
+        else
+        {
+            
+            
+        }
+        
+    }
     /*
     // MARK: - Navigation
 

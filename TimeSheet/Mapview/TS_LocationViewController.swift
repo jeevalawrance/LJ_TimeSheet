@@ -11,12 +11,25 @@ import MapKit
 import CoreLocation
 import Alamofire
 
+protocol LocationViewProtocol {
+    func locationSelected(location : TS_LocationModel)
+}
+
 class TS_LocationViewController: UIViewController {
+    
+    var delegate : LocationViewProtocol?
+    
+    
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var btnCancel: UIButton!
     @IBOutlet weak var btnReload: UIButton!
     @IBOutlet weak var heightMapviewConstraint: NSLayoutConstraint!
     @IBOutlet weak var tblLocationNearby: UITableView!
+    
+    var locationArray : NSMutableArray = []
+    var jsonArray:NSMutableArray?
+
+//    https://stackoverflow.com/questions/35167437/adding-geojson-layer-to-google-map-in-ios
     
 //    @property (weak, nonatomic) IBOutlet UIView *viewMapSettings;
 //    @property (weak, nonatomic) IBOutlet UISegmentedControl *segmentControl;
@@ -24,6 +37,8 @@ class TS_LocationViewController: UIViewController {
 //    @property (weak, nonatomic) IBOutlet UIButton *btnCloseMapSettings;
 //    @property (weak, nonatomic) IBOutlet NSLayoutConstraint *mapViewBottomConstraint;
     
+    var x = 10
+
     let locationManager = CLLocationManager()
     let userCurrentLocation : CLLocation = CLLocation.init(latitude: 25.276987, longitude: 55.296249)
     
@@ -36,9 +51,90 @@ class TS_LocationViewController: UIViewController {
         locationManager.requestWhenInUseAuthorization()
         
         locationManager.requestLocation()
+        
+        func doSomething() {
+            someFunctionWithEscapingClosure { self.x = 100 }
+            someFunctionWithNonescapingClosure { x = 200 }
+        }
     }
+    var completionHandlers: [() -> Void] = []
+    func someFunctionWithEscapingClosure(completionHandler: @escaping () -> Void) {
+        completionHandlers.append(completionHandler)
+    }
+    func someFunctionWithNonescapingClosure(closure: () -> Void) {
+        closure()
+    }
+
+    @IBAction func cancelAction(_ sender: Any) {
+        
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    func downloadAndUpdate() {
+        
+        self.locationArray.removeAllObjects()
+        
+        let url = String(format: "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=%f,%f&radius=5000&sensor=true&key=%@",(userCurrentLocation.coordinate.latitude),userCurrentLocation.coordinate.longitude,Constant.GlobalConstants.kGoogleServerKey)
+        
+        Alamofire.request(url,
+                          method: .get,
+                          parameters: ["include_docs": "true"])
+            .validate()
+            .responseJSON { response in
+//                print(response.request)  // original URL request
+//                print(response.response) // URL response
+//                print(response.data)     // server data
+//                print(response.result)   // result of response serialization
+                
+                let result = response.result.value as! NSDictionary //[NSObject : AnyObject]
+
+//                print(result)
+                
+//                let jsonResArray : NSArray = result["results"] as! NSArray
+                
+                if let items = result["results"] as? [[String: Any]] {
+                    for place in items  {
+                        
+                        let locationDetail = TS_LocationModel()
+                        locationDetail.address = place["vicinity"] as? String
+                        locationDetail.location_id = place["id"] as? String
+
+                        if let geometry = place["geometry"] as? NSDictionary {
+                            
+                            if let locations = geometry["location"] as? NSDictionary {
+
+                                locationDetail.latitude = locations["lat"] as? Double
+
+                                locationDetail.longitude = locations["lng"] as? Double
+                                
+                            }
+                        }
+                        
+                        if ((place["name"]) != nil)
+                        {
+                            locationDetail.locationName = place["name"] as? String
+
+                        }
+                        else{
+                            locationDetail.locationName = place["vicinity"] as? String
+
+                        }
+                        
+                        self.locationArray.add(locationDetail)
+                        
+                    }
+                }
+
+                self.tblLocationNearby.reloadData()
+
+        }
+        
+    }
+  
     // With Alamofire
     func fetchNearestLocation(){//(completion: @escaping ([RemoteRoom]?) -> Void) {
+        
+        self.locationArray.removeAllObjects()
         
         let strUrl = String(format: "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=%f,%f&radius=5000&sensor=true&key=%@",(userCurrentLocation.coordinate.latitude),userCurrentLocation.coordinate.longitude,Constant.GlobalConstants.kGoogleServerKey)
         //        NSString *strUrl = [NSString stringWithFormat:@"https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=%f,%f&radius=5000&sensor=true&key=%@",userCurrentLocation.coordinate.latitude,userCurrentLocation.coordinate.longitude,kGoogleServerKey];
@@ -55,6 +151,21 @@ class TS_LocationViewController: UIViewController {
                 guard response.result.isSuccess else {
 //                    print("Error while fetching remote rooms: \(String(describing: response.result.error)")
 //                        completion(nil)
+                    
+                    
+                    if let JSON = response.result.value {
+                        self.jsonArray = JSON as? NSMutableArray
+                        for item in self.jsonArray! {
+                            
+                            let locationDetail = TS_LocationModel()
+                            
+                            self.locationArray.add(locationDetail)
+                            
+//                            self.locationArray.append(string! as! String)
+                        }
+                        self.tblLocationNearby.reloadData()
+                    }
+                    
                     return
                 }
                 
@@ -137,10 +248,7 @@ class TS_LocationViewController: UIViewController {
             completionHandler(nil)
         }
     }
-    @IBAction func cancelAction(_ sender: Any)
-    {
-        self.dismiss(animated: true, completion: nil)
-    }
+
     // MARK:- WEBSERVICE
     
     /*
@@ -245,7 +353,7 @@ extension TS_LocationViewController: CLLocationManagerDelegate {
 //                print(geoLoc?.locality ?? "unknown Geo location")
 //            }
             
-            self.fetchNearestLocation()
+            self.downloadAndUpdate()
         } else {
             print("No coordinates")
         }
@@ -254,3 +362,48 @@ extension TS_LocationViewController: CLLocationManagerDelegate {
         print(error)
     }
 }
+extension TS_LocationViewController : UITableViewDataSource
+{
+    
+    // MARK: - Table view data source
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return self.locationArray.count
+       
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+
+        let locDetails = self.locationArray[indexPath.row] as! TS_LocationModel
+        cell.imageView?.image = UIImage(named: "locationicon")
+        
+        cell.textLabel?.text = locDetails.locationName
+        cell.detailTextLabel?.text = locDetails.address
+        
+        return cell
+    }
+    
+}
+extension TS_LocationViewController : UITableViewDelegate
+{
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let location = locationArray[indexPath.row] //as? TS_LocationModel
+        
+        self.delegate?.locationSelected(location: location as! TS_LocationModel)
+        
+        self.dismiss(animated: true, completion: nil)
+        
+    }
+    //    taskInputVC
+}
+
+
+
