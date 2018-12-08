@@ -55,7 +55,7 @@ class TS_CoredataModel: UIViewController {
                     print(data.value(forKey: "userName") as! String)
                     
                     userDetail = data
-                   
+                    
                     break
                 }
                 
@@ -153,13 +153,17 @@ class TS_CoredataModel: UIViewController {
             objectId = objUrl.absoluteString
         }
 
-        let predicate = NSPredicate(format: "userID = %@", emailType as! CVarArg)
+//        let predicate = NSPredicate(format: "userID = %@", emailType as! CVarArg)
+
+//        let predicate = NSPredicate(format: "user == %@", data)
 
 //        let predicate = NSPredicate(format: "objectID = %@", objectId)
 
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "ProjectList")
+//        fetchRequest.predicate = predicate
+        let predicate = NSPredicate(format: "userID == %@", emailType as! String)
         fetchRequest.predicate = predicate
-        
+
         let sortDescriptor = NSSortDescriptor(key: "projectName", ascending: true)
         
         fetchRequest.predicate = nil
@@ -181,7 +185,7 @@ class TS_CoredataModel: UIViewController {
 //            objectId = objUrl.absoluteString
 //        }
 //        
-        let predicate = NSPredicate(format: "userID = %@", projectId)
+        let predicate = NSPredicate(format: "projectId = %@", projectId)
         
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "TaskList")
         fetchRequest.predicate = predicate
@@ -194,47 +198,11 @@ class TS_CoredataModel: UIViewController {
         
         return fetchRequest
     }
-    func createNewProject(name : String) {
-        
-//        let data = self.retrieveParticularUser(email: Constant.GlobalConstants.kEmailId)
-        
-        let emailType =  UserDefaults.standard.object(forKey: Constant.GlobalConstants.kEmailId)
-
-        let data = self.retrieveParticularUser(email: emailType as! String)
-        
-     
-        if data != nil {
-            let objUrl : URL = data.objectID.uriRepresentation()
-            
-            let objectId = objUrl.absoluteString
-            
-            let userType = data.value(forKey: "userType")
-            
-            let context = appDelegate.persistentContainer.viewContext
-            let entity = NSEntityDescription.entity(forEntityName: "ProjectList", in: context)
-            let newUser = NSManagedObject(entity: entity!, insertInto: context)
-            newUser.setValue(name, forKey: "projectName")
-//            newUser.setValue(objectId, forKey: "userID")
-            newUser.setValue(emailType, forKey: "userID")
-            newUser.setValue(userType, forKey: "userType")
-            //        newUser.setValue("1", forKey: "userType")
-            do {
-                try context.save()
-                
-            } catch {
-                print("Failed saving")
-            }
-        }
-        else
-        {
-           
-            
-        }
-        
-    }
     
-    func createNewProject(name : String, location : TS_LocationModel) {
+    func createNewProject(name : String, location : TS_LocationModel) -> Bool{
         
+        var status : Bool = false
+
         let emailType =  UserDefaults.standard.object(forKey: Constant.GlobalConstants.kEmailId)
         
         let data = self.retrieveParticularUser(email: emailType as! String)
@@ -256,12 +224,57 @@ class TS_CoredataModel: UIViewController {
             newUser.setValue(location.longitude, forKey: "longtitude")
             newUser.setValue(emailType, forKey: "userID")
             newUser.setValue(userType, forKey: "userType")
+            newUser.setValue(data, forKey: "user")
+
+            //        newUser.setValue("1", forKey: "userType")
+            do {
+                try context.save()
+                status = true
+            } catch {
+                print("Failed saving")
+                
+            }
+        }
+        else
+        {
+            
+            
+        }
+        return status
+    }
+    
+    func createNewTask(projectId : String, taskName : String) -> Bool {
+        
+        var status : Bool = false
+        
+        let emailType =  UserDefaults.standard.object(forKey: Constant.GlobalConstants.kEmailId)
+        
+        let data = self.retrieveParticularUser(email: emailType as! String)
+        
+        if data != nil {
+//            let objUrl : URL = data.objectID.uriRepresentation()
+            
+            //            let objectId = objUrl.absoluteString
+            
+            let userType = data.value(forKey: "userType")
+            
+            let context = appDelegate.persistentContainer.viewContext
+            let entity = NSEntityDescription.entity(forEntityName: "TaskList", in: context)
+            let newUser = NSManagedObject(entity: entity!, insertInto: context)
+            newUser.setValue(projectId, forKey: "projectId")
+            newUser.setValue(taskName, forKey: "taskName")
+            newUser.setValue(userType, forKey: "userType")
+            newUser.setValue(emailType, forKey: "userEmail")
+            
             //        newUser.setValue("1", forKey: "userType")
             do {
                 try context.save()
                 
+                status = true
             } catch {
                 print("Failed saving")
+                
+                status = false
             }
         }
         else
@@ -270,7 +283,10 @@ class TS_CoredataModel: UIViewController {
             
         }
         
+        return status
+        
     }
+    
     /*
     // MARK: - Navigation
 

@@ -54,13 +54,16 @@ class TS_TaskViewController: UIViewController {
         
         context = appDelegate.persistentContainer.viewContext
         
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        
         if objProjectDetail != nil {
             
             self.title = objProjectDetail.projectName
-
+            
             let objUrl : URL = objProjectDetail.objectID.uriRepresentation()
-
-           let objectId = objUrl.absoluteString
+            
+            let objectId = objUrl.absoluteString
             
             fetchedResultsController = NSFetchedResultsController(fetchRequest: objCoredata.allTasksFetchRequest(projectId: objectId), managedObjectContext: context!, sectionNameKeyPath: nil, cacheName: nil)
             
@@ -85,13 +88,18 @@ class TS_TaskViewController: UIViewController {
             viewForce.isHidden = false
         }
         self.tableView.reloadData()
-
     }
-    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool
+    {
+        textField.resignFirstResponder()
+        
+        return true
+    }
     // MARK: - USER ACTIONS
     @IBAction func addTaskAction(_ sender: Any)
     {
         let myVC = self.storyboard?.instantiateViewController(withIdentifier: "TS_AddNewTaskViewControllerVC") as! TS_AddNewTaskViewController
+        myVC.objProjectDetail = objProjectDetail
         self.navigationController?.pushViewController(myVC, animated: true)
 
 //        let myVC = self.storyboard?.instantiateViewController(withIdentifier: "TS_ProjectListViewControllerVC") as! TS_ProjectListViewController
@@ -139,10 +147,9 @@ extension TS_TaskViewController : UITableViewDataSource
         let cell = tableView.dequeueReusableCell(withIdentifier: "projectCell", for: indexPath)
         
         
-        if let project = fetchedResultsController?.object(at: indexPath) as? ProjectList {
+        if let project = fetchedResultsController?.object(at: indexPath) as? TaskList {
             
-            let title : String = project.projectName!
-            
+            let title : String = project.taskName!
             
             cell.textLabel?.text = title
             

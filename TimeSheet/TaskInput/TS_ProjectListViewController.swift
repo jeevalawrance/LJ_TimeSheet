@@ -63,23 +63,6 @@ class TS_ProjectListViewController: UIViewController {
         
         context = appDelegate.persistentContainer.viewContext
         
-        
-        fetchedResultsController = NSFetchedResultsController(fetchRequest: objCoredata.allProjectsFetchRequest(), managedObjectContext: context!, sectionNameKeyPath: nil, cacheName: nil)
-        
-        fetchedResultsController?.delegate = self as? NSFetchedResultsControllerDelegate
-        do {
-            try fetchedResultsController?.performFetch()
-        } catch {
-            print(error)
-        }
-        
-        if fetchedResultsController?.fetchedObjects?.count == 0 || fetchedResultsController?.fetchedObjects == nil
-        {
-            viewProject.isHidden = true
-        }
-        
-        self.tableView.reloadData()
-
         // Do any additional setup after loading the view.
         
         self.btnAddProject.layer.cornerRadius = 0.5;
@@ -100,6 +83,27 @@ class TS_ProjectListViewController: UIViewController {
         self.navigationItem.rightBarButtonItem  = right
         
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+        fetchedResultsController = NSFetchedResultsController(fetchRequest: objCoredata.allProjectsFetchRequest(), managedObjectContext: context!, sectionNameKeyPath: nil, cacheName: nil)
+        
+        fetchedResultsController?.delegate = self as? NSFetchedResultsControllerDelegate
+        do {
+            try fetchedResultsController?.performFetch()
+        } catch {
+            print(error)
+        }
+        
+        if fetchedResultsController?.fetchedObjects?.count == 0 || fetchedResultsController?.fetchedObjects == nil
+        {
+            viewProject.isHidden = true
+        }
+        
+        self.tableView.reloadData()
+
     }
 
     // MARK: - USER ACTIONS
@@ -128,7 +132,7 @@ class TS_ProjectListViewController: UIViewController {
             {
                 let objCoredata = TS_CoredataModel()
                 
-                objCoredata.createNewProject(name: firstTextField.text ?? "")
+//                objCoredata.createNewProject(name: firstTextField.text ?? "")
             }
             else
             {

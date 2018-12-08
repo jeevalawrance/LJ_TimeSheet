@@ -13,6 +13,7 @@
 		13D4626A21B50E240036A5B0 /* TS_LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D4626921B50E240036A5B0 /* TS_LocationViewController.swift */; };
 		13D4626C21B50EFA0036A5B0 /* reload_location.png in Resources */ = {isa = PBXBuildFile; fileRef = 13D4626B21B50EFA0036A5B0 /* reload_location.png */; };
 		13D4626E21B5155F0036A5B0 /* TS_AddProjectTitleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D4626D21B5155F0036A5B0 /* TS_AddProjectTitleVC.swift */; };
+		13F7C87921BC2C590074F107 /* TS_TaskListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F7C87821BC2C590074F107 /* TS_TaskListViewController.swift */; };
 		13FBCF4321BA72B600385CB7 /* TS_LocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13FBCF4221BA72B600385CB7 /* TS_LocationModel.swift */; };
 		EF05BD7B21AFCCB00047E823 /* TS_VerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF05BD7A21AFCCB00047E823 /* TS_VerificationViewController.swift */; };
 		EF073C1721A1B312009A0A27 /* TS_CoredataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF073C1621A1B312009A0A27 /* TS_CoredataModel.swift */; };
@@ -63,6 +64,7 @@
 		13D4626921B50E240036A5B0 /* TS_LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TS_LocationViewController.swift; sourceTree = "<group>"; };
 		13D4626B21B50EFA0036A5B0 /* reload_location.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reload_location.png; sourceTree = "<group>"; };
 		13D4626D21B5155F0036A5B0 /* TS_AddProjectTitleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TS_AddProjectTitleVC.swift; sourceTree = "<group>"; };
+		13F7C87821BC2C590074F107 /* TS_TaskListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TS_TaskListViewController.swift; sourceTree = "<group>"; };
 		13FBCF4221BA72B600385CB7 /* TS_LocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TS_LocationModel.swift; sourceTree = "<group>"; };
 		3869E15CEE37EF5488EF42A2 /* Pods-TimeSheet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeSheet.debug.xcconfig"; path = "Target Support Files/Pods-TimeSheet/Pods-TimeSheet.debug.xcconfig"; sourceTree = "<group>"; };
 		A03EC619401E7FA6BDF2FA6E /* Pods_TimeSheet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TimeSheet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -262,6 +264,7 @@
 				EF807CAD21A174EF009A7C7B /* TS_ProjectListViewController.swift */,
 				1306FA8621B1C23700409204 /* TS_AddNewTaskViewController.swift */,
 				13D4626D21B5155F0036A5B0 /* TS_AddProjectTitleVC.swift */,
+				13F7C87821BC2C590074F107 /* TS_TaskListViewController.swift */,
 			);
 			path = TaskInput;
 			sourceTree = "<group>";
@@ -443,6 +446,7 @@
 				EF0AD138219C9B0900B85839 /* TS_LandingViewController.swift in Sources */,
 				EF20DF3B219C0D57000FAD7E /* Extensions.swift in Sources */,
 				EF20DF03219C0A02000FAD7E /* ViewController.swift in Sources */,
+				13F7C87921BC2C590074F107 /* TS_TaskListViewController.swift in Sources */,
 				EF20DF71219C30E6000FAD7E /* PRGValidationField.swift in Sources */,
 				EF895BC521A0093C00EDA0CA /* TS_TaskViewController.swift in Sources */,
 				EF20DF39219C0D2A000FAD7E /* AnnotationView.swift in Sources */,

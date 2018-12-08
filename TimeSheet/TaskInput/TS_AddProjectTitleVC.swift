@@ -58,7 +58,22 @@ class TS_AddProjectTitleVC: UIViewController,LocationViewProtocol, UITextFieldDe
         {
             let objCoredata = TS_CoredataModel()
             
-            objCoredata.createNewProject(name: txtProjectName.text ?? "", location: self.locationModel!)
+            let status = objCoredata.createNewProject(name: txtProjectName.text ?? "", location: self.locationModel!)
+            
+            if status
+            {
+                self.backAction()
+            }
+            else{
+                let alert = UIAlertController(title: "Error", message: "Project unable to save", preferredStyle: UIAlertController.Style.alert)
+                
+                let ok = UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: {
+                    (action : UIAlertAction!) -> Void in })
+                
+                alert.addAction(ok)
+                
+                self.present(alert, animated: true, completion: nil)
+            }
             
 //            objCoredata.createNewProject(name: txtProjectName.text ?? "")
         }
