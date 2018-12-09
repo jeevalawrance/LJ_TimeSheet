@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14460.32" systemVersion="18B75" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="ProjectList" representedClassName="ProjectList" syncable="YES" codeGenerationType="class">
+    <entity name="ProjectList" representedClassName=".ProjectList" syncable="YES">
         <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="longtitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
@@ -11,14 +11,14 @@
         <relationship name="taskList" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="TaskList" inverseName="projectList" inverseEntity="TaskList" syncable="YES"/>
         <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="projectList" inverseEntity="User" syncable="YES"/>
     </entity>
-    <entity name="TaskList" representedClassName="TaskList" syncable="YES" codeGenerationType="class">
+    <entity name="TaskList" representedClassName=".TaskList" syncable="YES">
         <attribute name="projectId" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="taskName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="userEmail" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="userType" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="projectList" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ProjectList" inverseName="taskList" inverseEntity="ProjectList" syncable="YES"/>
     </entity>
-    <entity name="User" representedClassName="User" syncable="YES" codeGenerationType="class">
+    <entity name="User" representedClassName=".User" syncable="YES">
         <attribute name="userEmail" attributeType="String" syncable="YES"/>
         <attribute name="userIsVerified" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="userName" attributeType="String" syncable="YES"/>

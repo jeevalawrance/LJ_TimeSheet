@@ -110,6 +110,10 @@ class TS_TaskViewController: UIViewController {
         
         self.navigationController?.popViewController(animated: true)
     }
+    @objc func CheckInAction(_ sender: Any)
+    {
+        
+    }
     /*
     // MARK: - Navigation
 
@@ -133,7 +137,9 @@ extension TS_TaskViewController : UITableViewDataSource
         }
         return fetchedResultsController?.sections?.count ?? 0
     }
-    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 91.0
+    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         if fetchedResultsController == nil {
@@ -144,16 +150,24 @@ extension TS_TaskViewController : UITableViewDataSource
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "projectCell", for: indexPath)
+
+        let cell : TS_TableViewCell = tableView.dequeueReusableCell(withIdentifier: "taskCell", for: indexPath) as! TS_TableViewCell
         
         
         if let project = fetchedResultsController?.object(at: indexPath) as? TaskList {
             
             let title : String = project.taskName!
             
-            cell.textLabel?.text = title
+            cell.lblTaskName.text = title
+            
+            cell.switchButton.addTarget(self, action: #selector(TS_TaskViewController.CheckInAction(_:)), for: UIControl.Event.valueChanged)
+            
+            //            cell.textLabel?.text = title
             
         }
+        
+        
+        
         
         //        let headline = headlines[indexPath.row]
         //        cell.textLabel?.text = headline.title

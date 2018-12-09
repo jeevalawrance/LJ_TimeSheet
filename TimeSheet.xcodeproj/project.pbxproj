@@ -10,6 +10,14 @@
 		122C4F4130C41B98C9889367 /* Pods_TimeSheet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A03EC619401E7FA6BDF2FA6E /* Pods_TimeSheet.framework */; };
 		1306FA8721B1C23700409204 /* TS_AddNewTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1306FA8621B1C23700409204 /* TS_AddNewTaskViewController.swift */; };
 		1389426621BA8A9200A5CB1F /* TS_LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1389426521BA8A9200A5CB1F /* TS_LocationCell.swift */; };
+		13903FB021BD6755005620F2 /* ProjectList+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13903FAA21BD6755005620F2 /* ProjectList+CoreDataClass.swift */; };
+		13903FB121BD6755005620F2 /* ProjectList+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13903FAB21BD6755005620F2 /* ProjectList+CoreDataProperties.swift */; };
+		13903FB221BD6755005620F2 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13903FAC21BD6755005620F2 /* User+CoreDataClass.swift */; };
+		13903FB321BD6755005620F2 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13903FAD21BD6755005620F2 /* User+CoreDataProperties.swift */; };
+		13903FB421BD6755005620F2 /* TaskList+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13903FAE21BD6755005620F2 /* TaskList+CoreDataClass.swift */; };
+		13903FB521BD6755005620F2 /* TaskList+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13903FAF21BD6755005620F2 /* TaskList+CoreDataProperties.swift */; };
+		13903FB721BD70F9005620F2 /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13903FB621BD70F9005620F2 /* PersistenceManager.swift */; };
+		13903FB921BD9084005620F2 /* TS_TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13903FB821BD9084005620F2 /* TS_TableViewCell.swift */; };
 		13D4626A21B50E240036A5B0 /* TS_LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D4626921B50E240036A5B0 /* TS_LocationViewController.swift */; };
 		13D4626C21B50EFA0036A5B0 /* reload_location.png in Resources */ = {isa = PBXBuildFile; fileRef = 13D4626B21B50EFA0036A5B0 /* reload_location.png */; };
 		13D4626E21B5155F0036A5B0 /* TS_AddProjectTitleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D4626D21B5155F0036A5B0 /* TS_AddProjectTitleVC.swift */; };
@@ -61,6 +69,14 @@
 		06010F9BC68F47BEFDDF0EBE /* Pods-TimeSheet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeSheet.release.xcconfig"; path = "Target Support Files/Pods-TimeSheet/Pods-TimeSheet.release.xcconfig"; sourceTree = "<group>"; };
 		1306FA8621B1C23700409204 /* TS_AddNewTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TS_AddNewTaskViewController.swift; sourceTree = "<group>"; };
 		1389426521BA8A9200A5CB1F /* TS_LocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TS_LocationCell.swift; sourceTree = "<group>"; };
+		13903FAA21BD6755005620F2 /* ProjectList+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ProjectList+CoreDataClass.swift"; path = "DataLayer/ProjectList+CoreDataClass.swift"; sourceTree = "<group>"; };
+		13903FAB21BD6755005620F2 /* ProjectList+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ProjectList+CoreDataProperties.swift"; path = "DataLayer/ProjectList+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		13903FAC21BD6755005620F2 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "User+CoreDataClass.swift"; path = "DataLayer/User+CoreDataClass.swift"; sourceTree = "<group>"; };
+		13903FAD21BD6755005620F2 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "User+CoreDataProperties.swift"; path = "DataLayer/User+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		13903FAE21BD6755005620F2 /* TaskList+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "TaskList+CoreDataClass.swift"; path = "DataLayer/TaskList+CoreDataClass.swift"; sourceTree = "<group>"; };
+		13903FAF21BD6755005620F2 /* TaskList+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "TaskList+CoreDataProperties.swift"; path = "DataLayer/TaskList+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		13903FB621BD70F9005620F2 /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
+		13903FB821BD9084005620F2 /* TS_TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TS_TableViewCell.swift; sourceTree = "<group>"; };
 		13D4626921B50E240036A5B0 /* TS_LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TS_LocationViewController.swift; sourceTree = "<group>"; };
 		13D4626B21B50EFA0036A5B0 /* reload_location.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reload_location.png; sourceTree = "<group>"; };
 		13D4626D21B5155F0036A5B0 /* TS_AddProjectTitleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TS_AddProjectTitleVC.swift; sourceTree = "<group>"; };
@@ -183,6 +199,12 @@
 		EF20DEFF219C0A02000FAD7E /* TimeSheet */ = {
 			isa = PBXGroup;
 			children = (
+				13903FAA21BD6755005620F2 /* ProjectList+CoreDataClass.swift */,
+				13903FAB21BD6755005620F2 /* ProjectList+CoreDataProperties.swift */,
+				13903FAC21BD6755005620F2 /* User+CoreDataClass.swift */,
+				13903FAD21BD6755005620F2 /* User+CoreDataProperties.swift */,
+				13903FAE21BD6755005620F2 /* TaskList+CoreDataClass.swift */,
+				13903FAF21BD6755005620F2 /* TaskList+CoreDataProperties.swift */,
 				13D4626821B50DFF0036A5B0 /* Mapview */,
 				EF05BD7721AEA2AF0047E823 /* TimeSheet.entitlements */,
 				EF895BC321A0091B00EDA0CA /* TaskInput */,
@@ -253,6 +275,7 @@
 			children = (
 				EF2F2496219F3D5B001AE3FC /* TS_DashboardCellCollectionViewCell.swift */,
 				1389426521BA8A9200A5CB1F /* TS_LocationCell.swift */,
+				13903FB821BD9084005620F2 /* TS_TableViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -286,6 +309,7 @@
 				EF073C1621A1B312009A0A27 /* TS_CoredataModel.swift */,
 				13FBCF4221BA72B600385CB7 /* TS_LocationModel.swift */,
 				EF9DEA07219ECA58000C25F7 /* Constant.swift */,
+				13903FB621BD70F9005620F2 /* PersistenceManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -440,28 +464,36 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13903FB521BD6755005620F2 /* TaskList+CoreDataProperties.swift in Sources */,
 				13D4626A21B50E240036A5B0 /* TS_LocationViewController.swift in Sources */,
 				EF9DEA06219EC807000C25F7 /* TS_DashboardViewController.swift in Sources */,
 				EF20DF37219C0B80000FAD7E /* TS_MapViewController.swift in Sources */,
 				EF0AD138219C9B0900B85839 /* TS_LandingViewController.swift in Sources */,
 				EF20DF3B219C0D57000FAD7E /* Extensions.swift in Sources */,
+				13903FB221BD6755005620F2 /* User+CoreDataClass.swift in Sources */,
 				EF20DF03219C0A02000FAD7E /* ViewController.swift in Sources */,
 				13F7C87921BC2C590074F107 /* TS_TaskListViewController.swift in Sources */,
 				EF20DF71219C30E6000FAD7E /* PRGValidationField.swift in Sources */,
 				EF895BC521A0093C00EDA0CA /* TS_TaskViewController.swift in Sources */,
+				13903FB321BD6755005620F2 /* User+CoreDataProperties.swift in Sources */,
+				13903FB721BD70F9005620F2 /* PersistenceManager.swift in Sources */,
 				EF20DF39219C0D2A000FAD7E /* AnnotationView.swift in Sources */,
 				1306FA8721B1C23700409204 /* TS_AddNewTaskViewController.swift in Sources */,
 				EF05BD7B21AFCCB00047E823 /* TS_VerificationViewController.swift in Sources */,
 				13FBCF4321BA72B600385CB7 /* TS_LocationModel.swift in Sources */,
 				1389426621BA8A9200A5CB1F /* TS_LocationCell.swift in Sources */,
 				EFB6FEB7219FED3C00C58932 /* TS_DashboardModel.swift in Sources */,
+				13903FB121BD6755005620F2 /* ProjectList+CoreDataProperties.swift in Sources */,
 				EF20DF01219C0A02000FAD7E /* AppDelegate.swift in Sources */,
+				13903FB021BD6755005620F2 /* ProjectList+CoreDataClass.swift in Sources */,
 				13D4626E21B5155F0036A5B0 /* TS_AddProjectTitleVC.swift in Sources */,
 				EF807CAE21A174EF009A7C7B /* TS_ProjectListViewController.swift in Sources */,
 				EF073C1721A1B312009A0A27 /* TS_CoredataModel.swift in Sources */,
 				EF2F2497219F3D5B001AE3FC /* TS_DashboardCellCollectionViewCell.swift in Sources */,
+				13903FB921BD9084005620F2 /* TS_TableViewCell.swift in Sources */,
 				EF9DEA08219ECA58000C25F7 /* Constant.swift in Sources */,
 				EF073C1921A1CE2B009A0A27 /* TS_LoginViewController.swift in Sources */,
+				13903FB421BD6755005620F2 /* TaskList+CoreDataClass.swift in Sources */,
 				EF20DF64219C30B2000FAD7E /* TS_RegistrationViewController.swift in Sources */,
 				EF20DF09219C0A02000FAD7E /* TimeSheet.xcdatamodeld in Sources */,
 			);
